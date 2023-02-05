@@ -94,7 +94,7 @@ hr {
 }
 
 blockquote {
-    border-left: 5px solid #42b983;
+    border-left: 5px solid #f0eaaa;
     padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
     background-color: rgba(66, 185, 131, .1);
@@ -116,8 +116,8 @@ pre {
     top: 0;
     left: 12px;
     margin-top: 12px;
-    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
-    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #7763b1;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #8289d7;
 }
 
 code {
@@ -241,11 +241,11 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #a9ada8 0%, #aae0e3 100%);
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: #90c6f2 !important;
 }
 
 .white-color {
@@ -257,7 +257,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #bfc9a7 0%, #cde0ba 100%);
     opacity: 0.8;
 }
 
