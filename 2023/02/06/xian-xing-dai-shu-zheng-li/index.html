@@ -1,0 +1,1689 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="线性代数整理（部分）（前三章）, Giggle&#39;s blog">
+    <meta name="description" content="Welcome to my blog!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>线性代数整理（部分）（前三章） | Giggle&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Giggle&#39;s blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Giggle&#39;s blog</div>
+        <div class="logo-desc">
+            
+            Welcome to my blog!
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">线性代数整理（部分）（前三章）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-02-06
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-02-06
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    25 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="线性代数整理"><a href="#线性代数整理" class="headerlink" title="线性代数整理"></a>线性代数整理</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h2 id="第一章-矩阵与行列式"><a href="#第一章-矩阵与行列式" class="headerlink" title="第一章 矩阵与行列式"></a>第一章 矩阵与行列式</h2><h3 id="一、多项式"><a href="#一、多项式" class="headerlink" title="一、多项式"></a>一、多项式</h3><h3 id="二、矩阵的概念与运算"><a href="#二、矩阵的概念与运算" class="headerlink" title="二、矩阵的概念与运算"></a>二、矩阵的概念与运算</h3><h3 id="三、行列式"><a href="#三、行列式" class="headerlink" title="三、行列式"></a>三、行列式</h3><h3 id="四、可逆矩阵"><a href="#四、可逆矩阵" class="headerlink" title="四、可逆矩阵"></a>四、可逆矩阵</h3><h3 id="五、克莱姆法则"><a href="#五、克莱姆法则" class="headerlink" title="五、克莱姆法则"></a>五、克莱姆法则</h3><h3 id="六、矩阵的分块"><a href="#六、矩阵的分块" class="headerlink" title="六、矩阵的分块"></a>六、矩阵的分块</h3><h3 id="七、行列式的计算"><a href="#七、行列式的计算" class="headerlink" title="七、行列式的计算"></a>七、行列式的计算</h3><h3 id="八、几个特殊的矩阵"><a href="#八、几个特殊的矩阵" class="headerlink" title="八、几个特殊的矩阵"></a>八、几个特殊的矩阵</h3><h2 id="第二章-线性方程组理论"><a href="#第二章-线性方程组理论" class="headerlink" title="第二章 线性方程组理论"></a>第二章 线性方程组理论</h2><h3 id="一、矩阵的相抵标准形"><a href="#一、矩阵的相抵标准形" class="headerlink" title="一、矩阵的相抵标准形"></a>一、矩阵的相抵标准形</h3><h3 id="二、分块矩阵的初等变换"><a href="#二、分块矩阵的初等变换" class="headerlink" title="二、分块矩阵的初等变换"></a>二、分块矩阵的初等变换</h3><h3 id="三、n维向量空间"><a href="#三、n维向量空间" class="headerlink" title="三、n维向量空间"></a>三、n维向量空间</h3><h3 id="四、解线性方程组的消元法"><a href="#四、解线性方程组的消元法" class="headerlink" title="四、解线性方程组的消元法"></a>四、解线性方程组的消元法</h3><h3 id="五、向量的线性表示，线性相关和线性无关"><a href="#五、向量的线性表示，线性相关和线性无关" class="headerlink" title="五、向量的线性表示，线性相关和线性无关"></a>五、向量的线性表示，线性相关和线性无关</h3><h3 id="六、线性方程组解的结构"><a href="#六、线性方程组解的结构" class="headerlink" title="六、线性方程组解的结构"></a>六、线性方程组解的结构</h3><h2 id="第一章-矩阵与行列式-1"><a href="#第一章-矩阵与行列式-1" class="headerlink" title="第一章 矩阵与行列式"></a>第一章 矩阵与行列式</h2><h3 id="一、多项式-1"><a href="#一、多项式-1" class="headerlink" title="一、多项式"></a>一、多项式</h3><h4 id="1-多项式的带余除法"><a href="#1-多项式的带余除法" class="headerlink" title="1.多项式的带余除法"></a>1.多项式的带余除法</h4><p>若$p(x)$和$s(x)$是系数在数域F上的多项式，$s(x) \neq 0$,那么存在$p(x)=s(x)q(x)+r(x)$,$deg(r(x))&lt;deg(s(x))$</p>
+<h4 id="2-多项式根与系数的关系"><a href="#2-多项式根与系数的关系" class="headerlink" title="2.多项式根与系数的关系"></a>2.多项式根与系数的关系</h4><p>若$p(x)=a_{m}x^{m}+a_{m-1}x^{m-1}+ \cdots+a_{0}$为系数在复数域C上的m次多项式. $x_{1},x_{1},……,x_{m}$是$p(x)$的m个根.那么</p>
+<p>$$x_{1}+x_{2}+\cdots+x_{m}=-\frac{a_{m-1}}{a_{m}}$$</p>
+<p>$$x_{1}x_{2}\cdots x_{m}=(-1)^{m}\frac{a_{0}}{a_{m}}$$</p>
+<h4 id="3-数域"><a href="#3-数域" class="headerlink" title="3.数域"></a>3.数域</h4><ul>
+<li><p>所有的正整数不构成数域</p>
+</li>
+<li><p>所有整数不构成数域</p>
+</li>
+<li><p>数域的特点总结</p>
+<ul>
+<li><p>一个集合</p>
+</li>
+<li><p>两种运算</p>
+</li>
+<li><p>四个规律</p>
+<ul>
+<li><p>加法交换</p>
+</li>
+<li><p>加法结合</p>
+</li>
+<li><p>存在特别元素0</p>
+</li>
+<li><p>存在特别元素1</p>
+</li>
+<li><p>存在负元素</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="二、矩阵的概念与运算-1"><a href="#二、矩阵的概念与运算-1" class="headerlink" title="二、矩阵的概念与运算"></a>二、矩阵的概念与运算</h3><h4 id="1-几种特殊类型的矩阵"><a href="#1-几种特殊类型的矩阵" class="headerlink" title="1.几种特殊类型的矩阵"></a>1.几种特殊类型的矩阵</h4><ul>
+<li><p>行矩阵</p>
+</li>
+<li><p>列矩阵</p>
+</li>
+<li><p>零矩阵</p>
+</li>
+<li><p>方阵</p>
+<ul>
+<li><p>单位矩阵</p>
+</li>
+<li><p>对角形矩阵</p>
+</li>
+<li><p>数量矩阵，记作$aE$或者$aI$</p>
+</li>
+<li><p>对称矩阵</p>
+<p>$a_{ij}=a_{ji}$</p>
+</li>
+<li><p>反对称矩阵</p>
+<p>$a_{ij}=-a_{ji}$</p>
+<p>反对称矩阵对角线上元素一定是0</p>
+</li>
+<li><p>三角形矩阵</p>
+<ul>
+<li>上三角</li>
+<li>下三角</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-矩阵的运算"><a href="#2-矩阵的运算" class="headerlink" title="2.矩阵的运算"></a>2.矩阵的运算</h4><ul>
+<li><p>矩阵的加法</p>
+<ul>
+<li><p>矩阵加法运算的性质</p>
+<p>$$A+B=B+A;$$(加法交换律）</p>
+<p>$(A+B)+C=A+(B+C);$（加法结合律）</p>
+<p>$A+O=O+A;$(加法单位元)</p>
+<p>$A+(-A)=O;$(加法逆元）</p>
+</li>
+</ul>
+</li>
+<li><p>矩阵的数乘</p>
+<ul>
+<li><p>矩阵数乘的性质-</p>
+<p>$1A=A$</p>
+<p>$k(lA)=(kl)A$</p>
+<p>$(k+l)A=kA+lA$</p>
+<p>$k(A+B)=kA+kB$</p>
+</li>
+</ul>
+</li>
+<li><p>矩阵的乘法</p>
+<ul>
+<li>$A\cdot B=C$</li>
+</ul>
+<p>​       则$c_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+\cdots a_{ip}b_{pj}=\sum\limits_{k=1}^p a_{ik}b_{kj}$</p>
+<ul>
+<li><p>矩阵乘法的性质</p>
+<p>$(AB)C=A(BC)$</p>
+<p>$k(AB)=(kA)B=A(kB)$</p>
+<p>$(A+B)C=AC+BC$</p>
+<p>$C(A+B)=CA+CB$</p>
+<p>$k(A+B)=kA+kB$</p>
+<p>$A_{m\times p}O_{p\times n}=O_{m\times n}$</p>
+</li>
+</ul>
+</li>
+<li><p>矩阵的转置</p>
+<ul>
+<li><p>矩阵转置运算的性质</p>
+<p>$(A^{T})^{T}=A$</p>
+<p>$(A+B)^{T}=A^{T}+B^{T}$</p>
+<p>$(kA)^T=k(A)^T$</p>
+<p>$(AB)^{T}=B^{T}A^{T}$</p>
+</li>
+</ul>
+</li>
+<li><p>矩阵的共轭</p>
+</li>
+<li><p>矩阵的迹</p>
+</li>
+</ul>
+<h3 id="三、行列式-1"><a href="#三、行列式-1" class="headerlink" title="三、行列式"></a>三、行列式</h3><h4 id="1-排列的逆序数"><a href="#1-排列的逆序数" class="headerlink" title="1.排列的逆序数"></a>1.排列的逆序数</h4><p>逆序定义：在一个排列$(i_{1}i_{2}\cdots i_{t}\cdots i_{n}),t&lt;s$中，若数$i_{t}&gt;i_{s}$则称这两个数组成此排列的一个逆序；否则称这两个数组成此排列的一个逆序；否则称这两个数组成此排列的一个顺序。</p>
+<p>逆序数定义：在一个排列$i_{1}i_{2}\cdots i_{t}\cdots i_{n}$中逆序的总数称为此排列的逆序数。记为$\tau(i_{1}i_{2}\cdots i_{t}\cdots i_{n})$</p>
+<p>逆序数为奇数的排列为奇排列；</p>
+<p>逆序数为偶数的排列为偶排列。</p>
+<p>一个排列中的任意两个元素对换，排列改变奇偶性。</p>
+<h4 id="2-行列式"><a href="#2-行列式" class="headerlink" title="2.行列式"></a>2.行列式</h4><ul>
+<li><p>行列式的定义</p>
+</li>
+<li><p>贡献法</p>
+</li>
+<li><p>行列式的性质</p>
+<ul>
+<li>$D=D^{T}$</li>
+<li>行列式的两行（列）互换，行列式的值变号。</li>
+<li>如果行列式有两行（列）完全相同，则此行列式为零。</li>
+<li>行列式的某一行（列）中所有的元素都乘以同一个数k，等于用数k乘此行列式。</li>
+<li>行列式中如果有两行（列）元素成比例，则此行列式为零。</li>
+<li>若行列式的某一行（列)的元素都是两数之和，则该行列式等于两行列式之和。</li>
+<li>把行列式的某一行（列）的各元素乘以同一数然后加到另一行（列）对应的元素上去，行列式不变。</li>
+</ul>
+</li>
+<li><p>行列式的初等变换</p>
+<ul>
+<li>交换行列式的两行（列）</li>
+<li>行列式的一行(列)同乘以一个不等于0的数k</li>
+<li>行列式的一行（列）乘以一个数以后加至行列式的另一行（列）</li>
+</ul>
+</li>
+<li><p>行列式按行（列）展开</p>
+<ul>
+<li><p>余子式定义：在n阶行列式$D_{n}$中，划掉元素$a_{ij}$所在的行与列中的所有元素，余下的元素按原来的次序构成的n-1阶行列式，成为元素$a_{ij}$的余子式，记作$M_{ij}$.</p>
+</li>
+<li><p>代数余子式定义：称$(-1)^{i+j}M_{ij}$为元素$a_{ij}$的代数余子式，记作$A_{ij}$</p>
+</li>
+<li><p>行列式按行（列）展开定理：</p>
+<p>n阶行列式D的值等于它任一行的各元素与其对应的代数余子式乘积之和。</p>
+<ul>
+<li>推论 n阶行列式D的任一行（列）的各元素与另一行（列）对应的各元素的代数余子式的乘积之和等于0.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>范德蒙德行列式<br>$$<br>D_{n}=\begin{vmatrix}</p>
+<p>1&amp;1&amp;1&amp;\cdots&amp;1\</p>
+<p>x_{1}&amp;x_{2}&amp;x_{3}&amp;\cdots&amp;x_{n}\</p>
+<p>x_{1}^{2}&amp;x_{2}^{2}&amp;x_{3}^{2}&amp;\cdots&amp;x_{n}^{2}\</p>
+<p>\cdots&amp;\cdots&amp;\cdots&amp;\cdots&amp;\cdots&amp;\</p>
+<p>x_{1}^{n-1}&amp;x_{2}^{n-1}&amp;x_{3}^{n-1}&amp;\cdots&amp;x_{n}^{n-1}\</p>
+<p>\end{vmatrix}=\Pi_{1\leq j&lt;i\leq n}(x_{i}-x_{j})<br>$$</p>
+</li>
+<li><p>拉普拉斯展开定理</p>
+<ul>
+<li><p>在n阶行列式D中，任取k行k列，位于这k行k列交叉位置的元素按行列式D中的相对位置按原行列式D中的相对位置排成的k阶行列式N称为行列式D的一个k阶子式。</p>
+</li>
+<li><p>在行列式D中，划去k阶子式N所在的k行k列，剩余元素按原行列式D中的相对位置排成的n-k阶行列式M称为k阶子式N的余子式。</p>
+</li>
+<li><p>如果子式N的k行k列在D中的行标与列标分别为$i_{1},i_{2},\cdots ,i_{k},j_{1},j_{2},\cdots ,j_{k}$则称$$A=(-1)^{(i_{1}+i_{2}+\cdots +i_{k}+j_{1}+j_{2}+\cdots +j_{k})}M$$</p>
+<p>为N的代数余子式。</p>
+</li>
+<li><p><strong>Laplace定理</strong>  设在n阶行列式D中，取定某k行，则D位于这k行的所有k阶子式 $N_{i}(i=1,2,3,…,t)$与它们各自对应的代数余子式$A_{i}$的乘积之和等于行列式D，即</p>
+<p>$D=N_{1}A_{1}+N_{2}A_{2}+\cdots+N_{t}A_{t}=\sum\limits_{i=1}^tN_{i}A_{i}$</p>
+</li>
+</ul>
+</li>
+<li><p>行列式的乘积法则</p>
+<p>$|A_{n}B_{n}|=|A_{n}||B_{n}|$</p>
+</li>
+</ul>
+<h3 id="四、可逆矩阵-1"><a href="#四、可逆矩阵-1" class="headerlink" title="四、可逆矩阵"></a>四、可逆矩阵</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1.定义"></a>1.定义</h4><p>设A为n阶方阵，若存在n阶方阵B，使得$AB=BA=E$则称A是n阶可逆矩阵，或可逆阵，称B是A的逆矩阵。A的逆矩阵记作$A^{-1}$</p>
+<h4 id="2-条件"><a href="#2-条件" class="headerlink" title="2.条件"></a>2.条件</h4><p>矩阵A可逆的充分必要条件是A的行列式不等于0.</p>
+<h4 id="3-伴随矩阵"><a href="#3-伴随矩阵" class="headerlink" title="3.伴随矩阵"></a>3.伴随矩阵</h4><ul>
+<li><p>伴随矩阵的性质</p>
+<p>$AA^{<em>}=A^{</em>}A=|A|E_{n}$</p>
+</li>
+</ul>
+<h4 id="4-逆矩阵的性质"><a href="#4-逆矩阵的性质" class="headerlink" title="4.逆矩阵的性质"></a>4.逆矩阵的性质</h4><ul>
+<li>$(A^{-1})^{-1}=A$</li>
+<li>$若k\neq 0，则(kA)^{-1}=\frac{1}{k}A^{-1}$</li>
+<li>$(A_{1}A_{2}\cdots A_{m})^{-1}= A_{m}^{-1}A_{m-1}^{-1}\cdots A_{1}^{-1}$</li>
+<li>$(A^{T})^{-1}=(A^{-1})^{T}$</li>
+<li>$|A^{-1}|=|A|^{-1}$</li>
+<li>$(A^{m})^{-1}=(A^{-1})^{m}$</li>
+<li>$|A^{*}|=|A|^{n-1}$</li>
+</ul>
+<h4 id="5-一些小结论"><a href="#5-一些小结论" class="headerlink" title="5.一些小结论"></a>5.一些小结论</h4><ul>
+<li><p>若A,B可逆：<br>$$<br>{\begin{pmatrix}<br>A&amp;O\<br>O&amp;B\<br>\end{pmatrix}}^{-1}= \begin{pmatrix}<br>A^{-1}&amp;O\<br>O&amp;B^{-1}\<br>\end{pmatrix}<br>$$</p>
+<p>$$<br>{\begin{pmatrix}O&amp;A\B&amp;O\\end{pmatrix}}^{-1}= \begin{pmatrix}O&amp;B^{-1}\A^{-1}&amp;O\\end{pmatrix}​<br>$$</p>
+</li>
+<li><p>若A,C可逆：<br>$$<br>{\begin{pmatrix}<br>A&amp;B\<br>O&amp;C\<br>\end{pmatrix}}^{-1}= \begin{pmatrix}<br>A^{-1}&amp;-A^{-1}BC^{-1}\<br>O&amp;C^{-1}\<br>\end{pmatrix}<br>$$</p>
+</li>
+</ul>
+<h3 id="五、克莱姆法则-1"><a href="#五、克莱姆法则-1" class="headerlink" title="五、克莱姆法则"></a>五、克莱姆法则</h3><ul>
+<li><p>法则内容：</p>
+<p>有线性方程组：<br>$$<br>D(x) = \begin{cases}<br>a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=b_{1}\<br>a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=b_{2}\<br>\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\<br>a_{n1}x_{1}+a_{n2}x_{2}+\cdots+a_{nn}x_{n}=b_{n}\<br>\end{cases}<br>$$<br>的系数行列式不等于0，则非齐次方程组一定有解，且解是唯一的。</p>
+<p>解可以表述为：</p>
+<p>$x_{1}=\frac{D_{1}}{D},x_{2}=\frac{D_{2}}{D},\cdots,x_{n}=\frac{D_{n}}{D}$</p>
+</li>
+<li><p>克莱姆法则的证明：</p>
+<p>可将原方程组写成矩阵方程$AX=B$,若系数矩阵A可逆，则解向量X为：</p>
+<p>$$X=A^{-1}B=\frac{A^{*}B}{D}$$</p>
+</li>
+<li><p>如果线性方程组无解或者有两个不同的解，则它的系数行列式必为零。</p>
+</li>
+</ul>
+<h3 id="六、矩阵的分块-1"><a href="#六、矩阵的分块-1" class="headerlink" title="六、矩阵的分块"></a>六、矩阵的分块</h3><ul>
+<li><p>定义：将矩阵A用若干条纵线和横线分成许多小矩阵，每个小矩阵称为A的一个子块，以这些子块为元素的形式上的矩阵称为分块矩阵。</p>
+</li>
+<li><p>基本原则</p>
+<p>不管整体，还是局部小块，都必须符合矩阵运算规则</p>
+</li>
+<li><p>若$AB=O$,则矩阵B的列都是齐次线性方程组$AX=0$的解。</p>
+</li>
+<li><p>经常将矩阵分为行（列）向量，将矩阵相乘转化。</p>
+</li>
+<li><p>标准单位行（列）向量：</p>
+<ul>
+<li><p>以行为例：$\varepsilon_{1}=\begin{pmatrix}1\0\\vdots\0\\end{pmatrix}$$\varepsilon_{2}=\begin{pmatrix}0\1\\vdots\0\\end{pmatrix}$$\cdots$$\varepsilon_{n}=\begin{pmatrix}0\0\\vdots\1\\end{pmatrix}$</p>
+<p>特点：任何一个n维行向量，都可以由上述n个行向量线性表示出来</p>
+<p>​           任意一个标准单位行向量都无法由其他向量线性表示出来</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="七、行列式的计算-1"><a href="#七、行列式的计算-1" class="headerlink" title="七、行列式的计算"></a>七、行列式的计算</h3><ul>
+<li><p><strong>各行/列和固定行列式</strong></p>
+<p>全部加到某一行/列上，再进行相减。</p>
+</li>
+<li><p><strong>爪形行列式</strong></p>
+<p>用初等变换化成三角形行列式</p>
+</li>
+<li><p><strong>除对角线之外均相同行列式</strong></p>
+<p>用初等变换化为爪形</p>
+</li>
+<li><p><strong>两三角形行列式</strong></p>
+<p>拆行-递推</p>
+</li>
+<li><p><strong>两对角线形行列式</strong></p>
+<p>使用laplace定理</p>
+</li>
+<li><p><strong>三对角形</strong></p>
+<p>按第一行展开后化为数列问题解决</p>
+</li>
+<li><p><strong>vandemonde行列式问题</strong></p>
+</li>
+</ul>
+<h3 id="八、几个特殊的矩阵-1"><a href="#八、几个特殊的矩阵-1" class="headerlink" title="八、几个特殊的矩阵"></a>八、几个特殊的矩阵</h3><ul>
+<li>幂零矩阵<ul>
+<li>定义：设A为n阶方阵，若存在整数m，使得$A^{m}=O$,则称A为幂零矩阵，称最小的整数m为幂零指数</li>
+<li>幂零矩阵的性质<ul>
+<li>存在列向量$\alpha$,使得$A^{m-1}\alpha\neq0$</li>
+<li>方程组$x_{1}\alpha+x_{1}A\alpha+\cdots+x_{m}A^{m-1}\alpha=0$只有零解</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>幂等矩阵<ul>
+<li>定义：设A为n阶方阵，若$A^{2}=A$，那么称A为幂等矩阵（投影矩阵）</li>
+<li>性质：设A为n阶幂等矩阵.令$U=${${Ax|x\epsilon\mathbb{R}^{n}}$},$V=${${x\epsilon\mathbb{R}|Ax=0}$}<ul>
+<li>对任意$u\epsilon U$有$Au=u$</li>
+<li>对任意$v\epsilon V$有$Av=0$</li>
+<li>$U\bigcap V={0}$</li>
+<li>对任意向量，存在唯一的向量$u\epsilon U$，$v\epsilon V$使得向量为两者之和</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对合矩阵<ul>
+<li>定义：设A为n阶方阵，若$A^{2}=E$，那么称A为对合矩阵。</li>
+</ul>
+</li>
+<li>周期矩阵<ul>
+<li>定义：设A为n阶复方阵，若存在正整数$A^{k}=E$,那么称A为周期矩阵。</li>
+</ul>
+</li>
+</ul>
+<h2 id="第二章-线性方程组理论-1"><a href="#第二章-线性方程组理论-1" class="headerlink" title="第二章 线性方程组理论"></a>第二章 线性方程组理论</h2><h3 id="一、矩阵的相抵标准形-1"><a href="#一、矩阵的相抵标准形-1" class="headerlink" title="一、矩阵的相抵标准形"></a>一、矩阵的相抵标准形</h3><h4 id="矩阵的初等变换"><a href="#矩阵的初等变换" class="headerlink" title="矩阵的初等变换"></a>矩阵的初等变换</h4><ul>
+<li>交换矩阵的两行（列）；</li>
+<li>将矩阵的某一行（列）的各个元素乘以同一个非零的数k；</li>
+<li>将矩阵的某一行（列）的各个元素乘以同一个数k后，加到另一行（列）上去；</li>
+</ul>
+<h4 id="等价关系"><a href="#等价关系" class="headerlink" title="等价关系"></a>等价关系</h4><p>若A和B能互相经过初等变换得到，那么称A与B等价。</p>
+<p>等价关系：</p>
+<p>①A∽A（反身性）</p>
+<p>②若A∽B，则B∽A</p>
+<p>③若A∽B,B∽C，则A∽C（传递性）</p>
+<h4 id="行阶梯形矩阵的定义"><a href="#行阶梯形矩阵的定义" class="headerlink" title="行阶梯形矩阵的定义"></a>行阶梯形矩阵的定义</h4><p>（1）若矩阵A存在零行，则零行在非零行的下方；</p>
+<p>（2)设A的第k个非零行的第一个非零元素在第$j_{k}$列，共有r个非零行，则$j_{1}&lt;j_{2}&lt;\cdots&lt;j_{r}$;</p>
+<p>那么我们称矩阵A为行阶梯形矩阵。</p>
+<ul>
+<li>定理：任意矩阵可以经过单纯的初等行变换化为行阶梯形矩阵（不唯一）。</li>
+</ul>
+<h4 id="规范的行阶梯形矩阵的定义"><a href="#规范的行阶梯形矩阵的定义" class="headerlink" title="规范的行阶梯形矩阵的定义"></a>规范的行阶梯形矩阵的定义</h4><p>矩阵A是一个行阶梯形矩阵，如果A满足下述条件：</p>
+<p>（1）每个非零行的第一个非零元素为1；</p>
+<p>（2）每个非零行的第一个非零元素所在列的其他的元素都为0；</p>
+<p>那么我们称矩阵A为规范的行阶梯形矩阵。</p>
+<ul>
+<li>定理：任意矩阵可以经过单纯的初等行变换化为规范的行阶梯形矩阵（唯一）。</li>
+<li>定理：任意矩阵可以经过初等行列变换化为标准形矩阵。</li>
+</ul>
+<h4 id="矩阵的等价"><a href="#矩阵的等价" class="headerlink" title="矩阵的等价"></a>矩阵的等价</h4><p>如果矩阵A经过有限次初等变换化为矩阵B，则称矩阵A与B等价（相抵）。</p>
+<p>同样的，矩阵的等价关系也有</p>
+<ul>
+<li>自反性</li>
+<li>对称性</li>
+<li>传递性</li>
+</ul>
+<p>(I)矩阵A与B等价的充分必要条件是：</p>
+<p>存在可逆矩阵P和Q，使得$PAQ=B$</p>
+<p>(II)m行矩阵A与B等价的充分必要条件是：</p>
+<p>A与B有相同的标准形</p>
+<h4 id="初等矩阵"><a href="#初等矩阵" class="headerlink" title="初等矩阵"></a>初等矩阵</h4><ul>
+<li><p>定义：单位矩阵经过一次初等变换所得到的矩阵称为初等矩阵</p>
+</li>
+<li><p>定理：用一个m（n）阶初等矩阵左（右）乘一个m×n阶矩阵，相当于对这个矩阵作相应的初等行（列）变换</p>
+</li>
+<li><p>定理：对矩阵初等行（列）变换相当于在这个矩阵左（右）边乘以一个相应的初等矩阵。</p>
+</li>
+<li><p>推论：初等矩阵都是可逆矩阵，且其逆矩阵是同类型的初等矩阵。</p>
+</li>
+<li><p>定理：设A为m×n矩阵，则存在矩阵$R_{1},R_{2},\cdots,R_{s}$,使得$R_{1}R_{2}\cdots R_{s}A$为（规范的）阶梯形矩阵；进一步，存在初等矩阵$C_{1},C_{2},\cdots,C_{s}$,使得$R_{1}R_{2}\cdots R_{s}AC_{1}C_{2}\cdots C_{s}$</p>
+</li>
+<li><p>推论：对于mn矩阵A，存在m阶可逆矩阵P和n阶可逆矩阵Q,使得<br>$$<br>PAQ=\begin{pmatrix}<br>E_{r}&amp;O\<br>O&amp;O\<br>\end{pmatrix}<br>$$</p>
+</li>
+<li><p>推论：设A为可逆矩阵，则存在初等矩阵$R_{1},R_{2},\cdots,R_{s}$，使得$R_{1}R_{2}\cdots R_{s}A=E$；这样，$A=R_{s}^{-1}R_{s}^{-1}\cdots R_{1}^{-1};$</p>
+</li>
+<li><p>推论：n阶矩阵可逆且仅当它可以表示成一些初等矩阵的乘积。</p>
+</li>
+<li><p>推论：设A为m×n矩阵，P为m阶可逆矩阵，Q为n阶可逆矩阵，则PA,AQ,PAQ有相同的标准形。</p>
+</li>
+</ul>
+<h4 id="求逆矩阵的初等变换法"><a href="#求逆矩阵的初等变换法" class="headerlink" title="求逆矩阵的初等变换法"></a>求逆矩阵的初等变换法</h4><p>注意到</p>
+<p>$R_{1}R_{2}\cdots R_{s}A=E$</p>
+<p>$R_{1}R_{2}\cdots R_{s}=A^{-1}$</p>
+<p>$R_{1}R_{2}\cdots R_{s}E=A^{-1}$</p>
+<p>构造一个分块矩阵$(A\quad E)$，我们有</p>
+<p>$R_{1}R_{2}\cdots R_{s}(A\quad E)=(R_{1}R_{2}\cdots R_{s}A\quad R_{1}R_{2}\cdots R_{s}E)=(E\quad A^{-1})$</p>
+<h4 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h4><ul>
+<li>m行n列矩阵A的k阶子式子概念：</li>
+</ul>
+<p>令$k\le min${m,n},从A中取k行，k列的交叉点上元素，按照它们在矩阵A中的相对位置组成的k阶行列式。</p>
+<ul>
+<li>矩阵的秩</li>
+</ul>
+<p>设矩阵A是mxn阵，若存在一个r阶子式不为0，而矩阵A的全部r+1阶子式都为0，则称矩阵A的秩为r，记作r（A）=r。</p>
+<ul>
+<li><p>矩阵秩的性质</p>
+<p>(1)唯一性；</p>
+<p>(2)$r(A_{m×n})\le min${m，n}；</p>
+<p>(3)若矩阵A有一个r阶子式不为0，则$r(A)\ge r$;</p>
+<p>(4)若矩阵A的所有r阶子式都为0，则$r(A)\le r$</p>
+<p>(5)$r(A^{T})=r(A)$</p>
+<p>(6)行阶梯形矩阵的秩等于非零行的数目；</p>
+<p>(7)n阶可逆矩阵的秩等于n。</p>
+</li>
+<li><p>行（列）满秩矩阵：</p>
+<p>设矩阵A为m×n阶矩阵，若r（A）=m（r(A)=n),则称矩阵A为行（列）满秩矩阵.</p>
+</li>
+</ul>
+<p>A是n阶可逆阵当且仅当A是n阶满秩矩阵，当且仅当A是n阶非奇异阵。</p>
+<ul>
+<li><p>初等变换不改变矩阵的秩</p>
+<p>矩阵的秩是矩阵变换下的不变量</p>
+</li>
+<li><p>推论：设矩阵A的秩为r，即r(A)=r,则A的标准形矩阵为：<br>$$<br>\begin{pmatrix}<br>E_{r}&amp;O\<br>O&amp;O\<br>\end{pmatrix}<br>$$</p>
+</li>
+<li><p>矩阵乘以一个可逆阵，秩不变。</p>
+</li>
+<li><p>A为m×n矩阵，r（A）=r，则A可以分解为r个秩为1的矩阵的和</p>
+</li>
+<li><p>A为m×n矩阵，r（A）=r当且仅当存在m×r矩阵P和r×n矩阵Q，满足r(P)=r(Q)=r,且A=PQ</p>
+<h3 id="二、分块矩阵的初等变换-1"><a href="#二、分块矩阵的初等变换-1" class="headerlink" title="二、分块矩阵的初等变换"></a>二、分块矩阵的初等变换</h3><h4 id="分块矩阵初等变换和分块初等矩阵"><a href="#分块矩阵初等变换和分块初等矩阵" class="headerlink" title="分块矩阵初等变换和分块初等矩阵"></a>分块矩阵初等变换和分块初等矩阵</h4></li>
+<li><p>对分块矩阵的行列实施下列三种操作之一，称为对分块矩阵实施了一次初等变换：</p>
+<ul>
+<li>交换分块矩阵的两行</li>
+<li>用一个可逆矩阵P(Q)左（右）乘分块的某行的各子块</li>
+<li>用一个适当阶数的矩阵左（右）乘分块矩阵某行（列）的各子块后加到另一行的对应子块上去</li>
+</ul>
+</li>
+<li><p>分块初等矩阵</p>
+<p>分块的单位矩阵经过一次分块初等变换所得到的矩阵称为分块初等矩阵</p>
+</li>
+<li><p>定理:用分块初等矩阵左（右）乘分块矩阵相当于对分块矩阵实施相应的分块初等变换</p>
+</li>
+<li><p>行列式第一降阶定理：</p>
+<p>设<br>$$<br>M=\begin{pmatrix}<br>A&amp;B\<br>C&amp;D\<br>\end{pmatrix}<br>$$<br>且$|A|\neq0$,则$|M|=|A|\cdot |D-CA^{-1}B|$</p>
+</li>
+</ul>
+<h4 id="矩阵的秩重要性质整理"><a href="#矩阵的秩重要性质整理" class="headerlink" title="矩阵的秩重要性质整理"></a>矩阵的秩重要性质整理</h4><p>对$A\epsilon\mathbb{R}^{m×n}$</p>
+<ul>
+<li><p>0$\le r(A)\le min(n,m)$;</p>
+</li>
+<li><p>$r(A^{T})=r(A)，r(kA)=r(A)(k\neq 0)$</p>
+</li>
+<li><p>若$P\epsilon\mathbb{R}^{m×m}$$Q\epsilon\mathbb{R}^{n×n}$且P,Q可逆，则r（PAQ)=r(A);</p>
+</li>
+<li><p>$0\le r(A+B)\le r(A)+r(B);$</p>
+</li>
+<li><p>$max(r(A),r(B),r(A+B))\le r[A\quad B]\le r(A)+r(B)$</p>
+</li>
+<li><p>$$<br>\begin{pmatrix}<br>A&amp;O\<br>O&amp;B\<br>\end{pmatrix}=r(A)+r(B)<br>$$</p>
+</li>
+<li><p>$$<br>\begin{pmatrix}<br>A&amp;O\<br>C&amp;B\<br>\end{pmatrix}\ge r(A)+r(B)<br>$$</p>
+</li>
+<li><p>$$<br>\begin{pmatrix}<br>A&amp;C\<br>O&amp;B\<br>\end{pmatrix}\ge r(A)+r(B)<br>$$</p>
+</li>
+<li><p>$r(A)+r(B)-n\le r(AB) \le min(r(A),r(B));$</p>
+</li>
+<li><p>$r(A^{*})的情况（若r(A)=n,则n；n-1则1；否则0）；$</p>
+</li>
+<li><p>Frobenius不等式：$r(ABC)\ge r(AB)+r(BC)-r(B);$</p>
+</li>
+<li><p>$r(A)=r(A^{T}A)=r(A A^{T})=r(A^{T})$</p>
+</li>
+</ul>
+<h3 id="三、n维向量空间-1"><a href="#三、n维向量空间-1" class="headerlink" title="三、n维向量空间"></a>三、n维向量空间</h3><ul>
+<li><p>n维向量的运算性质</p>
+<p>加法：</p>
+<p>$(1)\alpha +\beta=\beta +\alpha$</p>
+<p>$(2)(\alpha +\beta)+\gamma =\alpha+(\beta +\gamma)$</p>
+<p>$(3)\alpha+0=\alpha$</p>
+<p>$(4)\alpha+(-\alpha)=0$</p>
+<p>数乘：</p>
+<p>$(5) 1\alpha=\alpha$</p>
+<p>$(6)k(l\alpha)=l(k\alpha)=(kl)\alpha$</p>
+<p>$(7)k(\alpha +\beta)=k\alpha +k\beta$</p>
+<p>$(8)(k+l)\alpha=k\alpha+l\alpha$</p>
+</li>
+<li><p>n维向量空间的子空间</p>
+<p>$S\subseteq F^{n}$,且S非空。如果S对于加法与数乘运算封闭，那么说S是$F^{n}$的子空间。、</p>
+</li>
+</ul>
+<h3 id="四、解线性方程组的消元法-1"><a href="#四、解线性方程组的消元法-1" class="headerlink" title="四、解线性方程组的消元法"></a>四、解线性方程组的消元法</h3><ul>
+<li>线性方程组<br>$$<br>\begin{align*}\begin{split}\left {\begin{array}{ll}<pre><code>a_&#123;11&#125;x_&#123;1&#125;+a_&#123;12&#125;x_&#123;2&#125;+\cdots a_&#123;1n&#125;x_&#123;n&#125;=b_&#123;1&#125;\\
+
+
+a_&#123;21&#125;x_&#123;1&#125;+a_&#123;22&#125;x_&#123;2&#125;+\cdots a_&#123;2n&#125;x_&#123;n&#125;=b_&#123;2&#125;\\
+\cdots \cdots \cdots \cdots\cdots \cdots \cdots \cdots \cdots \cdots  \\
+
+
+a_&#123;n1&#125;x_&#123;1&#125;+a_&#123;n2&#125;x_&#123;2&#125;+\cdots a_&#123;nn&#125;x_&#123;n&#125;=b_&#123;n&#125;\\
+</code></pre>
+\end{array}\right.\end{split}\end{align*}<br>$$</li>
+</ul>
+<p>$b_{1},b_{2},\cdots ,b_{m}$不全为0时，称为非齐次线性方程组，</p>
+<p>$b_{1},b_{2},\cdots ,b_{m}$全为0时，称为齐次线性方程组。</p>
+<ul>
+<li><p>$系数矩阵的秩\le 增广矩阵的秩\le 系数矩阵的秩+1$</p>
+</li>
+<li><p>如果两个方程组的解的集合完全相同，那么我们所这两个方程组是同解方程组。</p>
+</li>
+<li><p>消元法解线性方程组AX=B方法：</p>
+<p>（1）通过初等行变换将线性方程组的增广矩阵化为规范的阶梯形矩阵T；</p>
+<p>（2）写出以T为增广矩阵的同解方程组；</p>
+<p>（3）将一些自由未知量移到等式右边。</p>
+</li>
+<li><p>自由未知量的个数为：未知数的个数-系数矩阵的秩</p>
+</li>
+<li><p>解的情况总结：</p>
+<p>1.系数矩阵的秩=增广矩阵的秩时，有解</p>
+<p>2.系数矩阵的秩=增广矩阵的秩，没有自由未知量（n-r（A)=0)时，有唯一解</p>
+<p>3.系数矩阵的秩=增广矩阵的秩，有自由未知量（n-r（A)&gt;0)时，有无穷多解</p>
+<p>4.系数矩阵的秩不等于增广矩阵的秩，无解</p>
+</li>
+<li><p>齐次线性方程组AX=O总是有解的（0解）。</p>
+<p>方程组存在非0解当且仅当r（A）=r&lt;n</p>
+<p>方程组只有0解当且仅当r（A)=n</p>
+</li>
+</ul>
+<h3 id="五、向量的线性表示，线性相关和线性无关-1"><a href="#五、向量的线性表示，线性相关和线性无关-1" class="headerlink" title="五、向量的线性表示，线性相关和线性无关"></a>五、向量的线性表示，线性相关和线性无关</h3><ul>
+<li><p>向量组线性表出具有传递性</p>
+</li>
+<li><p>向量组的等价</p>
+<p>设有两个向量组$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}和\beta_{1},\beta_{2},\cdots ,\beta_{t}$，$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$可由$\beta_{1},\beta_{2},\cdots ,\beta_{t}$线性表出，$\beta_{1},\beta_{2},\cdots ,\beta_{t}$也可由$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$线性表出，那么称向量组$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$与向量组$\beta_{1},\beta_{2},\cdots ,\beta_{t}$等价。</p>
+<p>向量组等价意味着可以相互表示</p>
+</li>
+<li><p>线性相关与线性无关</p>
+<p>设$\alpha_{1},\alpha_{2},\cdots ,\alpha_{m}$是m个n维向量，若存在m个不全为0的数$k_{1},k_{2}\cdots k_{m}$,使得<br>$$<br>k_{1}\alpha_{1}+k_{2}\alpha_{2}+\cdots +k_{m}\alpha_{m}=0<br>$$<br>其中0为n维向量，则称$\alpha_{1},\alpha_{2},\cdots ,\alpha_{m}$线性相关；否则称它们线性无关。</p>
+</li>
+<li><p>一些有关向量线性相关性的结论</p>
+<p>m个n维向量中，若含有0向量，则这m个向量线性相关；</p>
+<p>m个n维向量中，若有一部分向量线性相关，则这m个向量线性相关；</p>
+<p>若m个n维向量是线性无关的，则这m个向量中的任何一部分向量，放在一起，也是线性无关的</p>
+<p>$\alpha_{1},\alpha_{2},\cdots ,\alpha_{m}$线性相关（无关）$&lt;=&gt;$齐次线性方程组$x_{1}\alpha_{1}+x_{2}\alpha_{2}+\cdots +x_{m}\alpha_{m}=0$有非零解（只有零解）</p>
+</li>
+<li><p>向量组的极大线性无关组</p>
+<p>定义：设有向量组$\alpha_{1},\alpha_{2},\cdots ,\alpha_{m}$，若$\alpha_{i_{1}},\alpha_{i_{2}},\cdots ,\alpha_{i_{r}}$是向量组的r个向量，且满足</p>
+<p>（1）$\alpha_{i_{1}},\alpha_{i_{2}},\cdots ,\alpha_{i_{r}}$线性无关</p>
+<p>（2）向量组$\alpha_{1},\alpha_{2},\cdots ,\alpha_{m}$的任意一个向量都可以由$\alpha_{i_{1}},\alpha_{i_{2}},\cdots ,\alpha_{i_{r}}$线性表出，</p>
+<p>则称$\alpha_{i_{1}},\alpha_{i_{2}},\cdots ,\alpha_{i_{r}}$是向量组$\alpha_{1},\alpha_{2},\cdots ,\alpha_{m}$的一个极大线性无关组。</p>
+</li>
+<li><p>定理：给定两个向量组</p>
+<p>（I）$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$</p>
+<p>（II）$\beta_{1},\beta_{2},\cdots ,\beta_{t}$</p>
+<p>如果（1)$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$可由$\beta_{1},\beta_{2},\cdots ,\beta_{t}$线性表出（2）$s&gt;t$</p>
+<p>那么$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$线性相关</p>
+</li>
+<li><p>给定两个向量组</p>
+<p>（I）$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$</p>
+<p>（II）$\beta_{1},\beta_{2},\cdots ,\beta_{t}$</p>
+<p>如果（1)$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$可由$\beta_{1},\beta_{2},\cdots ,\beta_{t}$线性表出（2）$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$线性无关</p>
+<p>那么$s\le t$</p>
+</li>
+<li><p>关于向量组的秩的有关结论</p>
+<ul>
+<li>向量组$\alpha_{1},\alpha_{2},\cdots ,\alpha_{m}$线性无关$&lt;=&gt;r(\alpha_{1},\alpha_{2},\cdots ,\alpha_{m})=m$</li>
+<li>$r(\alpha_{1},\alpha_{2},\cdots ,\alpha_{m})=r&gt;0$,则向量组中任意k&gt;r个向量都是线性无关的。</li>
+<li>若$r(\alpha_{1},\alpha_{2},\cdots ,\alpha_{m})=r&gt;0$，则向量组任意r个线性无关的向量都是它的一个极大线性无关组</li>
+<li>若$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$可由$\beta_{1},\beta_{2},\cdots ,\beta_{t}$线性表出，则$r(\alpha_{1},\alpha_{2},\cdots ,\alpha_{s})\le r(\beta_{1},\beta_{2},\cdots ,\beta_{t})$</li>
+<li>等价的向量组有相同的秩</li>
+</ul>
+</li>
+<li><p>矩阵的秩=矩阵的列秩=矩阵的行秩</p>
+</li>
+<li><p>$\alpha_{1},\alpha_{2},\cdots ,\alpha_{s}$线性无关，$(\beta_{1}\quad\beta_{2}\quad\cdots \beta_{m})=(\alpha_{1}\quad\alpha_{2}\quad\cdots \alpha_{s})A_{s×m}$</p>
+<p>则r($\beta_{1},\beta_{2},\cdots ,\beta_{m}$)=r（A)</p>
+</li>
+</ul>
+<h3 id="六、线性方程组解的结构-1"><a href="#六、线性方程组解的结构-1" class="headerlink" title="六、线性方程组解的结构"></a>六、线性方程组解的结构</h3><ul>
+<li><p>齐次线性方程组任意解的线性组合还是方程组的解</p>
+</li>
+<li><p>解的结构：</p>
+<p>定义:（1）设$\xi_{1},\xi_{2},\cdots,\xi_{s}$线性无关（2）齐次线性方程组的任意一个解都可以由$\xi_{1},\xi_{2},\cdots,\xi_{s}$线性表出</p>
+<p>则称$\xi_{1},\xi_{2},\cdots,\xi_{s}$为齐次线性方程组的基础解系。</p>
+</li>
+<li><p>非齐次方程组解的性质：</p>
+<p>设$\xi_{1},\xi_{2}$是线性方程组Ax=B的解</p>
+<p>那么（I）$\xi_{1}-\xi_{2}$是齐次线性方程组Ax=0的解；</p>
+<p>​       （2）若$\xi$是线性方程组Ax=B的解，$\rho$是线性方程组Ax=0的解，那么$\xi+\rho$是方程组Ax=B的解</p>
+</li>
+<li><p>非齐次线性方程组的通解=非齐次线性方程组的特解+对应的齐次线性方程组的通解</p>
+</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Wang Yixiao</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://GiggleWang.github.io/2023/02/06/xian-xing-dai-shu-zheng-li/">http://GiggleWang.github.io/2023/02/06/xian-xing-dai-shu-zheng-li/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Wang Yixiao</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/WeChatpay.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/02/06/xian-xing-dai-shu-zheng-li/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="线性代数整理（部分）（前三章）">
+                        
+                        <span class="card-title">线性代数整理（部分）（前三章）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Wang Yixiao
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/02/06/tong-guo-hexo-he-github-chuang-jian-ge-ren-blog-zhi-bei/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="通过hexo和github创建个人blog指北">
+                        
+                        <span class="card-title">通过hexo和github创建个人blog指北</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Wang Yixiao
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Wang Yixiao</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:2386181363@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2386181363" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2386181363" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
