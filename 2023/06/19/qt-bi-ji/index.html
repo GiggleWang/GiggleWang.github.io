@@ -387,21 +387,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-06-20
+                    2023-06-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    892
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -473,6 +473,78 @@
 <li><p>实现点击按钮 关闭窗口的案例</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line"><span class="comment">//需求：点击我的按钮 关闭窗口</span></span><br><span class="line"><span class="comment">//参数1 信号的发送者 参数2 发送的信号（函数的地址） 参数3 信号的接受者 参数4 处理的槽函数</span></span><br><span class="line"><span class="built_in">connect</span>(myBtn,&amp;QPushButton::clicked,<span class="keyword">this</span>,&amp;myWidget::close);</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h2 id="10自定义的信号和槽"><a href="#10自定义的信号和槽" class="headerlink" title="10自定义的信号和槽"></a>10自定义的信号和槽</h2><ul>
+<li><p>自定义信号</p>
+<ul>
+<li><p>写到signals下</p>
+</li>
+<li><p>返回值是void</p>
+</li>
+<li>需要声明，不需要实现</li>
+<li>可以有参数，可以重载</li>
+</ul>
+</li>
+<li><p>自定义槽函数</p>
+<ul>
+<li><p>写到public slot下，或者public或者全局函数</p>
+</li>
+<li><p>返回值是void</p>
+</li>
+<li>需要声明，需要实现</li>
+<li>可以有参数，可以重载</li>
+</ul>
+</li>
+<li><p>触发自定义的信号</p>
+<ul>
+<li>emit 自定义的信号</li>
+</ul>
+</li>
+<li><p>案例：下课后，老师出发饿了信号，学生响应信号，请客吃饭（见文件the_second_day_learning)</p>
+</li>
+</ul>
+<h2 id="11-amp-12自定义的信号和槽发生重载的解决-amp-信号连接信号"><a href="#11-amp-12自定义的信号和槽发生重载的解决-amp-信号连接信号" class="headerlink" title="11&amp;12自定义的信号和槽发生重载的解决&amp;信号连接信号"></a>11&amp;12自定义的信号和槽发生重载的解决&amp;信号连接信号</h2><ul>
+<li><p>需要利用函数指针，明确指向函数的地址</p>
+</li>
+<li><pre><code>  void (Teacher::*teacherSignal)(QString)=&amp;Teacher::hungry;
+</code></pre></li>
+<li><p>QString转成char*</p>
+<ul>
+<li>.ToUtf8()转为QByteArray</li>
+<li>.Data()转为char *</li>
+</ul>
+</li>
+<li><p>信号可以连接信号</p>
+</li>
+<li><p>断开信号：disconnect</p>
+</li>
+<li><p>拓展</p>
+<ul>
+<li>1、信号是可以连接</li>
+<li>2、一个信号可以连接多个槽函数</li>
+<li>3、多个信号可以连接同一个槽函数</li>
+<li>4、信号和槽函数的参数必须类型一一对应</li>
+<li>5、信号和槽的参数个数不需要一致，信号的参数个数可以多于槽函数的参数个数</li>
+</ul>
+</li>
+</ul>
+<h2 id="13-Qt4版本信号槽连接"><a href="#13-Qt4版本信号槽连接" class="headerlink" title="13 Qt4版本信号槽连接"></a>13 Qt4版本信号槽连接</h2><ul>
+<li>connect（信号的发送者，发送的信号 SIGNAL(信号)，信号接受者，槽函数 SLOT(槽函数)）</li>
+<li>优点 参数直观</li>
+<li>缺点 编译器不会检测参数类型</li>
+</ul>
+<h2 id="14-Lambda表达式"><a href="#14-Lambda表达式" class="headerlink" title="14 Lambda表达式"></a>14 Lambda表达式</h2><ul>
+<li>[]标识符 匿名函数<ul>
+<li>=值传递</li>
+<li>&amp;引用传递</li>
+</ul>
+</li>
+<li><p>（）参数</p>
+</li>
+<li><p>{}实现体</p>
+</li>
+<li>mutable 修饰值传递变量，可以修改拷贝出的数据，改变不了本体</li>
+<li>返回值 [] ()-&gt;int{}</li>
 </ul>
 
                 
@@ -974,7 +1046,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.2k</span>&nbsp;字
+                class="white-color">16.6k</span>&nbsp;字
             
             
             
