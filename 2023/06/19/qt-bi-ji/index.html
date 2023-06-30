@@ -387,21 +387,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-06-28
+                    2023-06-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    11 分
                 </div>
                 
 
@@ -553,29 +553,54 @@ connect(ui-&gt;actionnew,&amp;QAction::triggered,[=]()&#123;
 
 
   &#125;);
-</code></pre><p>  ```</p>
-<h3 id="06-消息对话框"><a href="#06-消息对话框" class="headerlink" title="06 消息对话框"></a>06 消息对话框</h3><ul>
-<li>标准对话框-消息对话框<ul>
-<li>QMessageBox 静态成员函数 创建对话框</li>
-<li>错误、信息、提问、警告</li>
-<li>参数1 父亲  参数2 标题  参数3 显示内容  参数4 按键类型  参数5 默认关联回车</li>
-<li>返回值也是StandardButton类型，利用返回值来判断用户的输入</li>
-</ul>
+</code></pre>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 06 消息对话框</span><br><span class="line"></span><br><span class="line">+ 标准对话框-消息对话框</span><br><span class="line">  + QMessageBox 静态成员函数 创建对话框</span><br><span class="line">  + 错误、信息、提问、警告</span><br><span class="line">  + 参数1 父亲  参数2 标题  参数3 显示内容  参数4 按键类型  参数5 默认关联回车</span><br><span class="line">  + 返回值也是StandardButton类型，利用返回值来判断用户的输入</span><br><span class="line"></span><br><span class="line">### 07 其他标准对话框</span><br><span class="line"></span><br><span class="line">+ 颜色对话框   QColorDialog::getColor</span><br><span class="line">+ 文件对话框 QFileDialog::getOpenFileName（父亲，标题，默认路径，过滤文件）</span><br><span class="line">+ 字体对话框 QFontDialog::getFont</span><br><span class="line"></span><br><span class="line">### 08 登陆窗口布局</span><br><span class="line"></span><br><span class="line">+ 界面布局</span><br><span class="line">  + 实现登陆窗口</span><br><span class="line">  + 利用布局方式 给窗口进行美化</span><br><span class="line">  + 选取widget进行布局，水平布局，垂直布局，栅格布局</span><br><span class="line">  + 给用户名、密码、登陆、退出按钮进行布局</span><br><span class="line">  + 默认窗口和控件之间有9间隙，可以调整 layoutLeftMargin</span><br><span class="line">  + 利用弹簧进行布局</span><br><span class="line"></span><br><span class="line">### 09 控件</span><br><span class="line"></span><br><span class="line">+ 按钮组</span><br><span class="line">  + QPushButton 常用按钮</span><br><span class="line">  + QToolButton 工具按钮 用于显示图片 如果想显示文字，修改风格：toolButtonStyle</span><br><span class="line">  + radioButton 单选按钮，设置默认：ui-&gt;rBtnMan-&gt;setChecked(true);</span><br><span class="line">  + checkBox 多选按钮，监听状态：2是选中 1是半选中 0是未选中</span><br><span class="line"></span><br><span class="line">### 10 QListWidget控件</span><br><span class="line"></span><br><span class="line">+ QListWidget列表容器</span><br><span class="line">  + QListWidgetitem 一行内容</span><br><span class="line">  + ui-&gt;listWidget-&gt;additem(item);</span><br><span class="line">  + 设置居中方式item-&gt;setTextAlignment(Qt::AlignHCenter);</span><br><span class="line"></span><br><span class="line">### 11 QTreeWidget树控件</span><br><span class="line"></span><br><span class="line">+ 设置头</span><br><span class="line"></span><br><span class="line">  + ```c++</span><br><span class="line">    ui-&gt;treeWidget-&gt;setHeaderLabels(QStringList()&lt;&lt;&quot;英雄&quot;&lt;&lt;&quot;英雄介绍&quot;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>创建根节点</p>
+<ul>
+<li>```<br>QTreeWidgetItem<em> liItem =new QTreeWidgetItem(QStringList()&lt;&lt;”力量”);<br>QTreeWidgetItem</em> minItem =new QTreeWidgetItem(QStringList()&lt;&lt;”敏捷”);<br>QTreeWidgetItem* zhiItem =new QTreeWidgetItem(QStringList()&lt;&lt;”智力”);  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+ 添加根节点到树控件上</span><br><span class="line"></span><br><span class="line">  + ```c++</span><br><span class="line">    //加载顶层的节点</span><br><span class="line">        ui-&gt;treeWidget-&gt;addTopLevelItem(liItem);</span><br><span class="line">        ui-&gt;treeWidget-&gt;addTopLevelItem(minItem);</span><br><span class="line">        ui-&gt;treeWidget-&gt;addTopLevelItem(zhiItem);</span><br><span class="line">       </span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="07-其他标准对话框"><a href="#07-其他标准对话框" class="headerlink" title="07 其他标准对话框"></a>07 其他标准对话框</h3><ul>
-<li>颜色对话框   QColorDialog::getColor</li>
-<li>文件对话框 QFileDialog::getOpenFileName（父亲，标题，默认路径，过滤文件）</li>
-<li>字体对话框 QFontDialog::getFont</li>
+</li>
+<li><p>添加子节点</p>
+<ul>
+<li>```c++<br>//追加子节点<pre><code>QStringList heroL1;
+heroL1 &lt;&lt; &quot;刚被猪&quot; &lt;&lt; &quot;前排坦克，能在吸收伤害的同时造成可观的范围输出&quot;;
+QTreeWidgetItem* l1 =new QTreeWidgetItem(heroL1);
+liItem-&gt;addChild(l1);
+</code></pre><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 12 QTableWidget控件</span><br><span class="line"></span><br><span class="line">+ 设置列数</span><br><span class="line"></span><br><span class="line">  + ```c++</span><br><span class="line">       //TableWidget控件</span><br><span class="line">        //设置列数</span><br><span class="line">        ui-&gt;tableWidget-&gt;setColumnCount(3);</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="08-登陆窗口布局"><a href="#08-登陆窗口布局" class="headerlink" title="08 登陆窗口布局"></a>08 登陆窗口布局</h3><ul>
-<li>界面布局<ul>
-<li>实现登陆窗口</li>
-<li>利用布局方式 给窗口进行美化</li>
-<li>选取widget进行布局，水平布局，垂直布局，栅格布局</li>
-<li>给用户名、密码、登陆、退出按钮进行布局</li>
-<li>默认窗口和控件之间有9间隙，可以调整 layoutLeftMargin</li>
-<li>利用弹簧进行布局</li>
+</li>
+<li><p>设置水平表头</p>
+<ul>
+<li><p>```c++</p>
+<pre><code>//设置水平表头
+ui-&gt;tableWidget-&gt;setHorizontalHeaderLabels(QStringList()&lt;&lt;&quot;姓名&quot;&lt;&lt;&quot;性别&quot;&lt;&lt;&quot;年龄&quot;);
+</code></pre><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+ 设置行数</span><br><span class="line"></span><br><span class="line">  + ```c++</span><br><span class="line">        //设置 行数</span><br><span class="line">        ui-&gt;tableWidget-&gt;setRowCount(5);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>设置正文</p>
+<ul>
+<li><pre><code class="lang-c++">//    //设置正文
+//    ui-&gt;tableWidget-&gt;setItem(0,0,new QTableWidgetItem(&quot;亚瑟&quot;));
+
+    QStringList nameList;
+    nameList&lt;&lt;&quot;亚瑟&quot;&lt;&lt;&quot;赵云&quot;&lt;&lt;&quot;张飞&quot;&lt;&lt;&quot;关羽&quot;&lt;&lt;&quot;花木兰&quot;;
+    QList&lt;QString&gt; sexList;
+    sexList&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;女&quot;;
+    for(int i=0;i&lt;5;i++)
+    &#123;
+        int col=0;
+        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(nameList[i]));
+        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(sexList.at(i)));
+//        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(&quot;18&quot;));
+        //int 转QString
+        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(QString::number(i+18)));
+
+    &#125;
+</code></pre>
+</li>
 </ul>
 </li>
 </ul>
@@ -1079,7 +1104,7 @@ connect(ui-&gt;actionnew,&amp;QAction::triggered,[=]()&#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.5k</span>&nbsp;字
+                class="white-color">17.9k</span>&nbsp;字
             
             
             
