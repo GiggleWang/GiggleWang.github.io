@@ -387,21 +387,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-05
+                    2023-07-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    3.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    15 分
                 </div>
                 
 
@@ -582,44 +582,78 @@ ui-&gt;tableWidget-&gt;setHorizontalHeaderLabels(QStringList()&lt;&lt;&quot;姓�
 </li>
 <li><p>设置正文</p>
 <ul>
-<li><pre><code class="lang-c++">//    //设置正文
-//    ui-&gt;tableWidget-&gt;setItem(0,0,new QTableWidgetItem(&quot;亚瑟&quot;));
+<li><p>```c++<br>//    //设置正文<br>//    ui-&gt;tableWidget-&gt;setItem(0,0,new QTableWidgetItem(“亚瑟”));</p>
+<pre><code>QStringList nameList;
+nameList&lt;&lt;&quot;亚瑟&quot;&lt;&lt;&quot;赵云&quot;&lt;&lt;&quot;张飞&quot;&lt;&lt;&quot;关羽&quot;&lt;&lt;&quot;花木兰&quot;;
+QList&lt;QString&gt; sexList;
+sexList&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;女&quot;;
+for(int i=0;i&lt;5;i++)
+&#123;
+    int col=0;
+    ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(nameList[i]));
+    ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(sexList.at(i)));
+</code></pre><p>//        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(“18”));</p>
+<pre><code>    //int 转QString
+    ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(QString::number(i+18)));
 
-    QStringList nameList;
-    nameList&lt;&lt;&quot;亚瑟&quot;&lt;&lt;&quot;赵云&quot;&lt;&lt;&quot;张飞&quot;&lt;&lt;&quot;关羽&quot;&lt;&lt;&quot;花木兰&quot;;
-    QList&lt;QString&gt; sexList;
-    sexList&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;男&quot;&lt;&lt;&quot;女&quot;;
-    for(int i=0;i&lt;5;i++)
-    &#123;
-        int col=0;
-        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(nameList[i]));
-        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(sexList.at(i)));
-//        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(&quot;18&quot;));
-        //int 转QString
-        ui-&gt;tableWidget-&gt;setItem(i,col++,new QTableWidgetItem(QString::number(i+18)));
+&#125;
+</code></pre><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 13 其它常用控件介绍</span><br><span class="line"></span><br><span class="line">+ stackedWidget控件：</span><br><span class="line">  + ui-&gt;stackedWidget-&gt;setCurrentIndex(1);</span><br><span class="line">+ 下拉框</span><br><span class="line">  + ui-&gt;comboBox-&gt;addItem(“奔驰”)；</span><br><span class="line">+ QLabel 显示图片</span><br><span class="line">+ QLabel 显示动图</span><br><span class="line">  + 设置后要加movie-&gt;start();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## DAY3</span><br><span class="line"></span><br><span class="line">### 02 自定义控件封装</span><br><span class="line"></span><br><span class="line">+ 自定义控件封装</span><br><span class="line">  + 添加新文件    Qt-设计师界面类(.h   .cpp   .ui)</span><br><span class="line">  + .ui中 设计 QSpringBox 和QSlider 两个控件</span><br><span class="line">  + Widget中使用自定义控件，拖拽一个Widget，点击提升为，点击添加，点击提升</span><br><span class="line">  + 实现功能，改变数字，滑动条跟着移动，信号槽监听</span><br><span class="line">  + 提供getNum和setNum对外接口</span><br><span class="line">  + 测试接口</span><br><span class="line"></span><br><span class="line">### 03 Qt中的鼠标事件</span><br><span class="line"></span><br><span class="line">+ 鼠标事件</span><br><span class="line">+ 鼠标进入事件 enterEvent</span><br><span class="line">+ 鼠标离开事件 leaveEvent</span><br><span class="line">+ 鼠标按下 mousePressEvent(QMouseEvent *ev)</span><br><span class="line">+ 鼠标释放 mouseReleaseEvent(QMouseEvent *ev)</span><br><span class="line">+ 鼠标移动 mouseMoveEvent(QMouseEvent *ev)</span><br><span class="line">+ ev-&gt;x()  x坐标 ev-&gt;y()  y坐标</span><br><span class="line">+ ev-&gt;button() 可以判断所有按键 Qt::LeftButton Qt::RightButton</span><br><span class="line">+ ev-&gt;buttons()判断组合按键 判断move时候的左右键 结合&amp;操作符</span><br><span class="line">+ 格式化字符串 QString(&quot;%1 %2&quot;).arg(111).arg(222)</span><br><span class="line"></span><br><span class="line">```c++</span><br><span class="line">myWidget::myWidget(QWidget *parent) : QLabel(parent)</span><br><span class="line">&#123;</span><br><span class="line">    //设置鼠标的追踪状态</span><br><span class="line">    setMouseTracking(true);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void myWidget::enterEvent(QEvent *event)</span><br><span class="line">&#123;</span><br><span class="line">    qDebug()&lt;&lt;&quot;enter&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void myWidget::leaveEvent(QEvent *event)</span><br><span class="line">&#123;</span><br><span class="line">    qDebug()&lt;&lt;&quot;leave&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void myWidget::mouseMoveEvent(QMouseEvent *ev)</span><br><span class="line">&#123;</span><br><span class="line">    //鼠标左键按下，提示信息</span><br><span class="line">//    if(ev-&gt;buttons()&amp;Qt::LeftButton)</span><br><span class="line">//    &#123;</span><br><span class="line">        QString str=QString(&quot;move x=%1 y=%2&quot;).arg(ev-&gt;x()).arg(ev-&gt;y());</span><br><span class="line">        qDebug()&lt;&lt;str;</span><br><span class="line">//    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void myWidget::mousePressEvent(QMouseEvent *ev)</span><br><span class="line">&#123;</span><br><span class="line">    //鼠标左键按下，提示信息</span><br><span class="line">    if(ev-&gt;button()==Qt::LeftButton)</span><br><span class="line">    &#123;</span><br><span class="line">        QString str=QString(&quot;press x=%1 y=%2&quot;).arg(ev-&gt;x()).arg(ev-&gt;y());</span><br><span class="line">        qDebug()&lt;&lt;str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void myWidget::mouseReleaseEvent(QMouseEvent *ev)</span><br><span class="line">&#123;</span><br><span class="line">    qDebug()&lt;&lt;&quot;release&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="04-定时器1"><a href="#04-定时器1" class="headerlink" title="04 定时器1"></a>04 定时器1</h3><ul>
+<li>利用时间 void timerEvent(QTimerEvent*ev);</li>
+<li>启动定时器 startTimer(1000) 毫秒单位</li>
+<li>timerEvent的返回值是定时器的唯一表示 可以和ev-&gt;timerId作比较</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">Widget::<span class="built_in">Widget</span>(QWidget *parent)</span><br><span class="line">    : <span class="built_in">QWidget</span>(parent)</span><br><span class="line">    , <span class="built_in">ui</span>(<span class="keyword">new</span> Ui::Widget)</span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;<span class="built_in">setupUi</span>(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//启动定时器</span></span><br><span class="line">    id1=<span class="built_in">startTimer</span>(<span class="number">1000</span>);<span class="comment">//参数1 间隔 单位 毫秒</span></span><br><span class="line">    id2=<span class="built_in">startTimer</span>(<span class="number">2000</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Widget::~<span class="built_in">Widget</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">delete</span> ui;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Widget::timerEvent</span><span class="params">(QTimerEvent* ev)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ev-&gt;<span class="built_in">timerId</span>()==id1)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//label2 每隔1秒+1</span></span><br><span class="line">        <span class="type">static</span> <span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line">        ui-&gt;label_2-&gt;<span class="built_in">setText</span>(QString::<span class="built_in">number</span>(num++));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(ev-&gt;<span class="built_in">timerId</span>()==id2)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//label3 每隔2秒+1</span></span><br><span class="line">        <span class="type">static</span> <span class="type">int</span> num2=<span class="number">1</span>;</span><br><span class="line">        ui-&gt;label_3-&gt;<span class="built_in">setText</span>(QString::<span class="built_in">number</span>(num2+=<span class="number">1</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="05-定时器2"><a href="#05-定时器2" class="headerlink" title="05 定时器2"></a>05 定时器2</h3><ul>
+<li>利用定时器类Qtimer</li>
+<li>创建定时器对象 QTimer *timer=new QTimer(this)</li>
+<li>启动定时器 timer-&gt;start(毫秒)</li>
+<li>每隔一定毫秒 发送信号timeout 进行监听</li>
+<li>暂停timer-&gt;stop</li>
+</ul>
+<h3 id="06-event事件分发器"><a href="#06-event事件分发器" class="headerlink" title="06 event事件分发器"></a>06 event事件分发器</h3><ul>
+<li>用途：用于事件的分发</li>
+<li>也可以做拦截操作，不建议</li>
+<li>bool event（QEvent* e）</li>
+<li>返回值 如果是true 代表用户处理这个事件，不向下分发了</li>
+<li>e-&gt;type()==鼠标按下</li>
+</ul>
+<h3 id="07-事件过滤器"><a href="#07-事件过滤器" class="headerlink" title="07 事件过滤器"></a>07 事件过滤器</h3><ul>
+<li>在程序将事件分发到事件分发器前，可以利用过滤器做拦截</li>
+<li>步骤<ul>
+<li>给控件安装事件过滤器</li>
+<li>重写eventFilter(obj,e)函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="08-QPainter-绘图"><a href="#08-QPainter-绘图" class="headerlink" title="08 QPainter 绘图"></a>08 QPainter 绘图</h3><ul>
+<li>绘图事件 void Widget::paintEvent(QPaintEvent*)</li>
+<li>声明一个画家对象  QPainter painter(this);</li>
+<li>画线，画圆，画矩形，画文字</li>
+<li>设置画笔 QPen 设置画笔宽度 风格</li>
+<li>设置画刷 QBrush 设置画刷 风格</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">Widget::paintEvent</span><span class="params">(QPaintEvent*)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//实例化画家对象 this 指定的是绘图的设备</span></span><br><span class="line">    <span class="function">QPainter <span class="title">painter</span><span class="params">(<span class="keyword">this</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置画笔</span></span><br><span class="line">    <span class="function">QPen <span class="title">pen</span><span class="params">(QColor(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>))</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置画笔宽度</span></span><br><span class="line">    pen.<span class="built_in">setWidth</span>(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置画笔风格</span></span><br><span class="line">    pen.<span class="built_in">setStyle</span>(Qt::DotLine);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//让画家使用这个画笔</span></span><br><span class="line">    painter.<span class="built_in">setPen</span>(pen);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置画刷</span></span><br><span class="line"><span class="comment">//    QBrush brush(QColor(0,255,0));</span></span><br><span class="line">    <span class="function">QBrush <span class="title">brush</span><span class="params">(Qt::cyan)</span></span>;</span><br><span class="line">    painter.<span class="built_in">setBrush</span>(brush);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//画线</span></span><br><span class="line">    painter.<span class="built_in">drawLine</span>(<span class="built_in">QPoint</span>(<span class="number">0</span>,<span class="number">0</span>),<span class="built_in">QPoint</span>(<span class="number">100</span>,<span class="number">100</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//画圆</span></span><br><span class="line">    painter.<span class="built_in">drawEllipse</span>(<span class="built_in">QPoint</span>(<span class="number">100</span>,<span class="number">100</span>),<span class="number">50</span>,<span class="number">50</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//画矩形</span></span><br><span class="line">    painter.<span class="built_in">drawRect</span>(<span class="built_in">QRect</span>(<span class="number">20</span>,<span class="number">20</span>,<span class="number">50</span>,<span class="number">50</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">//画文字</span></span><br><span class="line">    painter.<span class="built_in">drawText</span>(<span class="built_in">QRect</span>(<span class="number">10</span>,<span class="number">200</span>,<span class="number">100</span>,<span class="number">50</span>),<span class="string">&quot;好好学习，天天向上&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="09-QPainter高级设置"><a href="#09-QPainter高级设置" class="headerlink" title="09 QPainter高级设置"></a>09 QPainter高级设置</h3><ul>
+<li><p>抗锯齿 效率低</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">painter.<span class="built_in">setRenderHint</span>(QPainter::Antialiasing);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对画家进行移动</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">painter.<span class="built_in">translate</span>(<span class="number">100</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存状态 save</p>
+</li>
+<li><p>还原状态 restore</p>
+</li>
+<li><p>如果想手动调用绘图时间 利用update</p>
+</li>
+<li>利用画家画图片 painter.drawPixmap(x,y,QPixmap””);</li>
+</ul>
 
-    &#125;
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="13-其它常用控件介绍"><a href="#13-其它常用控件介绍" class="headerlink" title="13 其它常用控件介绍"></a>13 其它常用控件介绍</h3><ul>
-<li>stackedWidget控件：<ul>
-<li>ui-&gt;stackedWidget-&gt;setCurrentIndex(1);</li>
-</ul>
-</li>
-<li>下拉框<ul>
-<li>ui-&gt;comboBox-&gt;addItem(“奔驰”)；</li>
-</ul>
-</li>
-<li>QLabel 显示图片</li>
-<li>QLabel 显示动图<ul>
-<li>设置后要加movie-&gt;start();</li>
-</ul>
-</li>
-</ul>
-<h2 id="DAY3"><a href="#DAY3" class="headerlink" title="DAY3"></a>DAY3</h2><h3 id="02-自定义控件封装"><a href="#02-自定义控件封装" class="headerlink" title="02 自定义控件封装"></a>02 自定义控件封装</h3>
                 
             </div>
             <hr/>
@@ -1117,7 +1151,7 @@ ui-&gt;tableWidget-&gt;setHorizontalHeaderLabels(QStringList()&lt;&lt;&quot;姓�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.5k</span>&nbsp;字
+                class="white-color">20.4k</span>&nbsp;字
             
             
             
