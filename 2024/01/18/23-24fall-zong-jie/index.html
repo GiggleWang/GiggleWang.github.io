@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="通过hexo和github创建个人blog指北, Giggle&#39;s blog">
+    <meta name="keywords" content="23-24Fall 总结, Giggle&#39;s blog">
     <meta name="description" content="Welcome to my blog!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>通过hexo和github创建个人blog指北 | Giggle&#39;s blog</title>
+    <title>23-24Fall 总结 | Giggle&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -252,7 +252,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">通过hexo和github创建个人blog指北</h1>
+                    <h1 class="description center-align post-title">23-24Fall 总结</h1>
                 </div>
             </div>
         </div>
@@ -380,21 +380,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-06
+                    2024-01-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-02-06
+                    2024-01-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.1k
                 </div>
                 
 
@@ -421,112 +421,38 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="通过hexo和github创建个人blog指北"><a href="#通过hexo和github创建个人blog指北" class="headerlink" title="通过hexo和github创建个人blog指北"></a>通过hexo和github创建个人blog指北</h1><p><strong>寒假闲来无事，就想搞个blog空间放点自己个人感想之类（深受wmgg和cnjj影响），正巧学院要求每个人都要写个人感想（卷素拓），就下定决心搞一个，途中充满坎坷，最后五次重头再来，终于成功搭建。</strong></p>
-<p><strong>在此过程中，感谢wmgg和cnjj的帮忙~要不是没有他们接受我很多次提问，可能我现在还在初级阶段qaq。</strong></p>
-<p><strong>话不多说，记录一下我的创建博客经历吧~希望对你有用！</strong></p>
-<p>先简要陈列一下大致的过程：</p>
-<p>1.相关工具安装</p>
-<p>2.github相关问题处理</p>
-<p>3.换主题！（原来的主题真的太丑……）</p>
-<p>4.发表文章！</p>
-<p>5.嘚瑟一下（bushi）</p>
-<p>下面就一步步慢慢来吧~</p>
-<h2 id="一、相关工具安装"><a href="#一、相关工具安装" class="headerlink" title="一、相关工具安装"></a>一、相关工具安装</h2><h3 id="安装GIT"><a href="#安装GIT" class="headerlink" title="安装GIT"></a>安装GIT</h3><p><strong>Windows端</strong></p>
-<p>到Git官网下载<strong><em>Git Download</em></strong>，安装后就可以用 <strong>Git Bash</strong> 命令行工具来使用Git了。安装好后，在Git Bash中输入git —version检验是否安装成功。</p>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p><strong>Windows端</strong></p>
-<p>Node.js官网下载LTS版本，64位msi安装包，安装后分别在命令行（win+R输入cmd调用）输入node -v和npm -v检验PATH环境变量是否配置了Node.js</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>Windows环境进入Git Bash，Linux环境进入终端，开始搭博客啦！</p>
-<p>首先新建一个文件夹blog来存放自己的博客，然后cd进入到这个文件夹下，输入下面的命令安装Hexo:</p>
-<p><strong>npm install -g hexo-cli</strong></p>
-<p>同样，安装完毕后需要hexo -v查看一下版本。</p>
-<p>至此需要的工具都安装完了。接下来初始化一下Hexo:</p>
-<p><strong>hexo init blog</strong></p>
-<p>这里的blog取什么名字都行。</p>
-<p>这时，在你的blog文件夹下会出现一个新的blog文件夹，进入到这个子文件夹后新建Hexo。</p>
-<p><strong>npm install</strong></p>
-<p>新建完成后，指定文件夹目录下应该有以下主要文件：</p>
-<ul>
-<li>node_modules：依赖包</li>
-<li>scaffolds：生成文章的一些模板</li>
-<li>source：用来存放自己的文章</li>
-<li>themes：网站主题</li>
-<li>_config.yml：博客的配置文件</li>
-</ul>
-<p><strong>hexo g</strong></p>
-<p><strong>hexo server</strong></p>
-<p>输入以上命令来开启hexo服务，在浏览器中输入localhost:4000就可以看到博客的初始化界面啦，现在还是有点丑丑的。</p>
-<h2 id="二、github相关问题处理"><a href="#二、github相关问题处理" class="headerlink" title="二、github相关问题处理"></a>二、github相关问题处理</h2><p>首先，要做好准备工作，登陆github官网创建个人账号，并且在github中新建一个<strong>和你用户名相同的</strong> 仓库，后面加 <strong>.github.io</strong>，也就是<strong>xxxx.github.io</strong>，只有这样将来要部署到GitHub Page的时候才会被识别。</p>
-<p>这里值得一提的是，github只有英文版，如果英文不太好的友友们（我自己就是）可以用谷歌浏览器打开，让强大的智能替我们翻译一下~</p>
-<h3 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a><strong>生成SSH添加到GitHub</strong></h3><p>回到Git Bash中，输入以下命令：</p>
-<p><strong>git config —global user.name “yourname”</strong></p>
-<p><strong>git config —global user.email “youremail”</strong></p>
-<p>这里的<strong><em>yourname</em></strong>对应你的GitHub用户名，<strong><em>youremail</em></strong>对应你的GitHub注册邮箱，这样GitHub才能知道你是不是对应它的用户。不放心的话可以用下面两条命令来检查一下：</p>
-<p><strong>git config user.name</strong></p>
-<p><strong>git config user.email</strong></p>
-<p>然后创建SSH，你可以选择密钥的保存位置，然后一路回车。</p>
-<p><strong>ssh-keygen -t rsa -C “youremail”</strong></p>
-<p>这里面可能有一步要输入yes，注意着点就ok</p>
-<p>创建成功后，文件夹下会有两个文件，其中<strong><em>id_rsa</em></strong>是你这台电脑的私人密钥，<strong><em>id_rsa.pub\</em></strong>是公共密钥。把公钥放在GitHub上，这样当你链接GitHub自己的账户时，她就会根据公钥匹配你的私钥，匹配成功才能通过git上传自己的文件到GitHub上。</p>
-<p>在GitHub的setting（右上角头像下拉）中找到<strong><em>SSH and GPG keys</em></strong>的设置选项，点击<strong><em>New SSH key\</em></strong>，把<strong><em>id_rsa.pub\</em></strong>里面的内容复制进去。</p>
-<p>然后回到Git Bash，试试是否配置成功。</p>
-<p>配置成功后，大概率还会收到邮件通知你已经配对成功辣！</p>
-<p>革命成功大半！！！</p>
-<h3 id="将Hexo部署到GitHub"><a href="#将Hexo部署到GitHub" class="headerlink" title="将Hexo部署到GitHub"></a><strong>将Hexo部署到GitHub</strong></h3><p>在这步中，我们将要把Hexo和GitHub关联起来，使得Hexo生成的文章都部署到GitHub上。</p>
-<p>打开网站配置文件_config.yml，拉到最后，将deploy部分修改为：</p>
-<p><strong>deploy:</strong></p>
-<p> <strong>type: git</strong></p>
-<p> <strong>repo: <a target="_blank" rel="noopener" href="https://github.com/YourGithubName/YourGithubName.github.io.git">https://github.com/YourGithubName/YourGithubName.github.io.git</a></strong></p>
-<p> <strong>branch: master</strong></p>
-<p>YourGithubName对应你的GitHub账户</p>
-<p>注意注意注意！这里的所有冒号后面必须要跟一个空格！这里的所有冒号后面必须要跟一个空格！这里的所有冒号后面必须要跟一个空格！重要的事情说三遍！！！</p>
-<p>接下来安装<strong><em>deploy-git</em></strong>，只有这样才能用命令将文章部署到GitHub上：</p>
-<p><strong>npm install hexo-deployer-git —save</strong></p>
-<p>然后进行以下的命令操作：</p>
-<p><strong>hexo clean</strong></p>
-<p><strong>hexo generate</strong></p>
-<p><strong>hexo deploy</strong></p>
-<ul>
-<li><strong>hexo clean</strong>：清除之前生成的东西，在日后新部署文章的时候可以使用，现在加不加没什么区别</li>
-<li><strong>hexo generate</strong>：生成静态文章，缩写“hexo g”</li>
-<li><strong>hexo deploy</strong>：部署文章，缩写“hexo d”</li>
-</ul>
-<p>在浏览器地址栏中输入<a target="_blank" rel="noopener" href="https://yourname.github.io就可以看到你的博客网站了！！">https://yourname.github.io就可以看到你的博客网站了！！</a></p>
-<p>开心~~~</p>
-<p>到这里为止，可以说空间的搭建已经完成了，可是有一个问题，那就是太丑辣！！！</p>
-<p>下面跟我一起去修改一下主题吧~</p>
-<h2 id="三、换主题！"><a href="#三、换主题！" class="headerlink" title="三、换主题！"></a>三、换主题！</h2><p>我换的是matery主题，链接奉上~</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
-<p>点开链接，打开readme.md文件。</p>
-<p>点击CN中文说明</p>
-<p>跟着作者的步骤一步步走就ok辣</p>
-<p>值得一提的是，有一部分（个性化）作者没有讲明白</p>
-<p>在csdn上找了一篇文章，</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41376237/article/details/113475727">https://blog.csdn.net/qq_41376237/article/details/113475727</a></p>
-<p>按着这个连接走可以很好的了解每一部分代码各自的功能~</p>
-<p>换主题这方面还是挺繁琐的，但是只要耐心一步步走完，高人领路，一点不难！</p>
-<h2 id="四、发表文章！"><a href="#四、发表文章！" class="headerlink" title="四、发表文章！"></a>四、发表文章！</h2><p>首先，要下载一个编辑md文件的软件，比如typora（我正在用这个写这篇文章）</p>
-<p>正版软件是要收钱的（好像80y）</p>
-<p>至于小道途径也是有的捏，github上一搜一大把，大家八仙过海各显神通吧~</p>
-<p>（富哥当我没说）</p>
-<p>准备工作完毕！现在编辑好想要发表的文章，开始传到自己的网站上！</p>
-<p><strong>将导出的<code>.md</code>文件复制到hexo博客文件下的<code>/source/_posts</code>文件内；</strong></p>
-<p><strong>复制完成后，用编译器打开这个文件，在第一行加上<code>title</code>；</strong></p>
-<p>title格式如下：</p>
-<p>“—-”</p>
-<p>“title：my blog”</p>
-<p>“—-”</p>
-<p>上文中的引号不用输入。</p>
-<p>命名结束完成后，在/source/_posts文件内鼠标右键点击空白处，选择Git Bash Here：</p>
-<p>输入 hexo g (完整命令为hexo generate)，用于生成静态文件；<br>然后输入 hexo s(完整命令为hexo server)，用于启动服务器，主要用来本地预览；完成后 打开浏览器输入 <a href="http://localhost:4000，会发现多了你刚写的那篇博客">http://localhost:4000，会发现多了你刚写的那篇博客</a>;<br>最后输入hexo d(hexo deploy)，用于将本地文件发布到github等git仓库上；</p>
-<p>最后，文章发布成功！！！</p>
-<p>这样就可以搭建好自己的blog空间啦~</p>
-<p>你学废了吗？</p>
-<p>下注文中一些文字出处，再次对原作者表示感谢！</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45663697/article/details/109008471">https://blog.csdn.net/weixin_45663697/article/details/109008471</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41376237/article/details/113475727">https://blog.csdn.net/qq_41376237/article/details/113475727</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzA3NDk4NzA0MQ==&amp;mid=2650486705&amp;idx=1&amp;sn=a7e5d66faf53b223e90fd091cc42b5c0&amp;chksm=8778f4ffb00f7de9f02f84d74393cb81544037ec9af469fa77be2211a4ca4fc5f29b77bbaab2&amp;mpshare=1&amp;scene=23&amp;srcid=1118oY8SYhnqQImXNlJew7hY&amp;sharer_sharetime=1637318270042&amp;sharer_shareid=f4f1251be68d7d516945f36b7eae3f49#rd">https://mp.weixin.qq.com/s?__biz=MzA3NDk4NzA0MQ==&amp;mid=2650486705&amp;idx=1&amp;sn=a7e5d66faf53b223e90fd091cc42b5c0&amp;chksm=8778f4ffb00f7de9f02f84d74393cb81544037ec9af469fa77be2211a4ca4fc5f29b77bbaab2&amp;mpshare=1&amp;scene=23&amp;srcid=1118oY8SYhnqQImXNlJew7hY&amp;sharer_sharetime=1637318270042&amp;sharer_shareid=f4f1251be68d7d516945f36b7eae3f49#rd</a></p>
-<p>欢迎大家对giggle的空间提出宝贵意见！</p>
-<p>如果你也有了自己的blog空间，可以联系giggle互相建个友情链接哟~</p>
+                <h1 id="2023-2024-Fall-总结"><a href="#2023-2024-Fall-总结" class="headerlink" title="2023-2024 Fall 总结"></a>2023-2024 Fall 总结</h1><p>在漫长的疫情之后，我很快迎来了自己的第二个学年。秋学期的度过显得瞬间而匆忙，看似浮光掠影，但是也收获满满。</p>
+<h2 id="爱情"><a href="#爱情" class="headerlink" title="爱情"></a>爱情</h2><p>浅浅翻了一下过去的两个学期的总结，第一个部分都是学习，确实在整个大一的过程中学习都是我的“主线任务”，但是这学期可能是一个例外，因为自己好像在大二上的“线索”是爱情。</p>
+<p>从学期开始，自己早整整一个星期到校，为了能够与小韩老师争取多相处一段时间却悲催的发现小韩老师并不会早来，只好在图书馆耗费时间，每个晚上和pck wxc一起探讨军情；前两个星期一直为了和小韩老师多一点接触，屡次邀请一起出去玩，但是通通被拒，最后心如死灰，甚至在第一星期的周末临时选择回家。</p>
+<p>接下来自己的心境似乎变得许多，意识到爱情并非争取即可得到。但是看似是如此，心里仍然无法放弃希望，而希望的彻底破灭，是小韩老师在那个周末请我出来喝咖啡，在3个小时的聊天之后提出了我们并不适合。至此，全剧终。我认为。</p>
+<p>如果剧集就在这时候结束了，显然不可以说自己的这学期是由爱情贯穿的。在国庆之后，爱情迎来了“惊天大逆转”，最后也是和靖宝成功的走进了恋爱。在接近100天的相处里，我越发感受到自己的选择是非常明智的，一起自习，一起吃饭，也有过一些些小矛盾，但是我们都相对合理地解决……和靖宝的相处是愉快而幸福的，也是靖宝支撑着我度过了学期后期比较艰苦的时光。</p>
+<h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>在刚入学的时候就听优秀的张卫鸣学长跟我讲，大二上的学习是比较轻松愉快的，结果显然。因为只有一个半早八嘿嘿（yxdzwmxzyyds</p>
+<p>但是或许所谓的“轻松愉快”也只限于前几个星期，后来的半学期忙的也是不可开交。</p>
+<p>正好成绩已经差不多全部出来，不妨以此为契机进行一下战果总结。本学期满绩门数只有8.5学分，相比前两学期都有所下降（该死的离散数学卡我94.4绩点），核心课程除了思修和体育课之外都上了90分，最后的核心学积分大概在93.5左右，但排名仍然是在10/92浮动。下面对每门课程进行小小的点评以及自己在学习课程中的感受。</p>
+<h3 id="软件基础实践-SEP"><a href="#软件基础实践-SEP" class="headerlink" title="软件基础实践(SEP)"></a>软件基础实践(SEP)</h3><p>这门课其实从大一下学期就开始开设，课程由杜东东老师主讲，但是讲解的内容几乎没什么人听，因为要不然是太过于晦涩，要不然就是非常简单的自学内容。</p>
+<p>个人认为这门课最重要的部分是在于它的lab和project。从lab1的痛彻骨髓到后来逐渐变得轻松，再到暑假写qlink时自学Qt，第一次接触个人大项目，还有在较短时间内完成QBasic……相对其他课程比较大的workload带来了这门课程更多的收获，对我的码力有了极大的促进作用。值得一提的是，在QBasic答辩的时候，我发现自己少实现了一个功能qaq，于是多了一门上机考，在一个小时内极限实现，最后也得到了不错的分数。</p>
+<h3 id="大学物理（荣誉）（2）"><a href="#大学物理（荣誉）（2）" class="headerlink" title="大学物理（荣誉）（2）"></a>大学物理（荣誉）（2）</h3><p>袁神万岁！！！</p>
+<p>这学期的课程我终于有机会去选择袁晓忠老师，但是感受更加明显的是袁晓忠老师的课程难度以及作业难度是相对于之前的陈洁老师更大的，每次听完课都觉得自己好像懂了，但是做这部分的作业却是一种要扒一层皮的感觉，好在扒完皮之后也可以对知识有更好的理解。</p>
+<p>这门课也没什么好说的了，因为袁晓忠老师的教学能力是公认的牛:cow:</p>
+<h3 id="基础物理实验（荣誉）（2）"><a href="#基础物理实验（荣誉）（2）" class="headerlink" title="基础物理实验（荣誉）（2）"></a>基础物理实验（荣誉）（2）</h3><p>只有一学分的小课，目标是完成6个实验，因为荣誉课的亲民考虑只需写三次实验报告，但是都是比较困难的实验内容。</p>
+<p>只提一句，如果想实验报告得高分，可以多玩玩花活，比如说写写代码附在后面，会有意想不到的效果哦</p>
+<h3 id="离散数学（荣誉）"><a href="#离散数学（荣誉）" class="headerlink" title="离散数学（荣誉）"></a>离散数学（荣誉）</h3><p>这门课可以说是考试过后有点生气的课程了。由于是荣誉课程，所以比面上的学生学更多的东西，这里要点名抽象代数，真的是课如其名，学不懂一点，再加上考的更加的基础，基本是ppt上的证明原题的改编，但是证明原题我也记不住啊:sob:</p>
+<p>龙宇老师人很好，作业只要提交就可以拿满分，平时作业很少很轻松（但是这也导致我什么都不会只好期末抱佛脚），最后给分也还行，但是卡我94.4的绩点实在是让人想不通了。</p>
+<h3 id="概率统计（荣誉）"><a href="#概率统计（荣誉）" class="headerlink" title="概率统计（荣誉）"></a>概率统计（荣誉）</h3><p>这是我考的第一门课，也是我骂的最多的一门课。</p>
+<p>全程老师讲的很急促，但是许多知识点也没有顾及，最后荣誉课的考试也比面上的同学要难许多许多，平时分也没有给满，真是令人心碎。</p>
+<p>总的课程难度其实不大，但是给的作业压力还是挺多的。</p>
+<h3 id="爱的艺术与人生"><a href="#爱的艺术与人生" class="headerlink" title="爱的艺术与人生"></a>爱的艺术与人生</h3><p>强推课程！！！</p>
+<p>陈玲玲老师人很好！作业也不是很多，每节课只要求到就行，并且最后给分也不戳。其实通识课也就是学一个心情，很开心和自己的小组成员一起拍了一个小电影，速速上链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pw411H7HU/?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1Pw411H7HU/?spm_id_from=333.999.0.0</a></p>
+<p>作为第一门通识课，拿到了90分，也算是很不错啦~</p>
+<h3 id="思想道德与法治"><a href="#思想道德与法治" class="headerlink" title="思想道德与法治"></a>思想道德与法治</h3><p>不想多说的课程，但是对于史洪波老师的评价一开始是有点极端的，但是看到成绩后觉得这个老师其实也还行，如果你是那种愿意每节课出席来换取一个比较高的平时分的话，强推！</p>
+<p>最后背书是真的痛苦啊:cry:</p>
+<h3 id="力学基础（荣誉）"><a href="#力学基础（荣誉）" class="headerlink" title="力学基础（荣誉）"></a>力学基础（荣誉）</h3><p>也是一门心情比较复杂的课程，学的东西其实很少，因为我一学期没听课最后一晚上也算是小小的速成了（这是可以说的嘛），跟继泽、彭娜、姜姜一起组队参加了结构赛，一整个星期没日没夜地往船院跑，最后虽然只拿了个三等奖，但是非常有意义的经历！</p>
+<p>最后虽然只有85分，虽然这节课学的很没用，但是还是要感谢这门课，感谢陈思佳老师和蔡遥助教，因为实践课给我一些很不一样的体验，总之很开心！！！</p>
+<h2 id="活动"><a href="#活动" class="headerlink" title="活动"></a>活动</h2><p>这学期自己玩的更多啦~从学期初看了伍佰老师的演唱会，到学期中旬和果果哥哥and靖靖姐姐一起去欢乐谷玩，再到学期结束的蒲公英安徽之旅，自己学会了在大学时光进行放松，也收获了不错的效果（指没有秃头:face_with_head_bandage:)</p>
+<p>很开心可以交到更多的朋友，更亲密的伙伴，也相信生活是快乐的事情，更多有意思的事情正等着我们一起去探索！</p>
+<h2 id="总结与展望"><a href="#总结与展望" class="headerlink" title="总结与展望"></a>总结与展望</h2><p>time flies！想想自己的大学生活已经要过半了，这个寒假自己也要多为下学期的魔鬼课程做一些准备，比如……先把繁花看完（bushi）</p>
+<p>说认真的，根据学长的建议，想要先自学一下高级数据结构和web开发，希望寒假过后自己可以收获满满！！！</p>
+<p>勇敢笑笑，不怕困难！</p>
 
                 
             </div>
@@ -553,7 +479,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://GiggleWang.github.io/2023/02/06/tong-guo-hexo-he-github-chuang-jian-ge-ren-blog-zhi-bei/">http://GiggleWang.github.io/2023/02/06/tong-guo-hexo-he-github-chuang-jian-ge-ren-blog-zhi-bei/</a>
+                    <a href="http://GiggleWang.github.io/2024/01/18/23-24fall-zong-jie/">http://GiggleWang.github.io/2024/01/18/23-24fall-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -762,13 +688,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/02/06/xian-xing-dai-shu-zheng-li/">
+                <a href="/2024/01/19/ics-nei-rong-zheng-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="线性代数整理（部分）（前三章）">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ics内容整理">
                         
-                        <span class="card-title">线性代数整理（部分）（前三章）</span>
+                        <span class="card-title">ics内容整理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,7 +705,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-19
                         </span>
                         <span class="publish-author">
                             
@@ -796,16 +722,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/06/tong-guo-hexo-he-github-chuang-jian-ge-ren-blog-zhi-bei/">
+                <a href="/2023/12/06/chou-xu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="通过hexo和github创建个人blog指北">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="愁">
                         
-                        <span class="card-title">通过hexo和github创建个人blog指北</span>
+                        <span class="card-title">愁</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -816,7 +742,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-06
                             </span>
                         <span class="publish-author">
                             
@@ -826,7 +752,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

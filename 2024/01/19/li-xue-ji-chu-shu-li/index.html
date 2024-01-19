@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="通过hexo和github创建个人blog指北, Giggle&#39;s blog">
+    <meta name="keywords" content="力学基础梳理, Giggle&#39;s blog">
     <meta name="description" content="Welcome to my blog!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>通过hexo和github创建个人blog指北 | Giggle&#39;s blog</title>
+    <title>力学基础梳理 | Giggle&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">通过hexo和github创建个人blog指北</h1>
+                    <h1 class="description center-align post-title">力学基础梳理</h1>
                 </div>
             </div>
         </div>
@@ -380,28 +380,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-02-06
+                    2024-01-19
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-02-06
+                    2024-01-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    5 分
                 </div>
                 
 
@@ -421,112 +421,158 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="通过hexo和github创建个人blog指北"><a href="#通过hexo和github创建个人blog指北" class="headerlink" title="通过hexo和github创建个人blog指北"></a>通过hexo和github创建个人blog指北</h1><p><strong>寒假闲来无事，就想搞个blog空间放点自己个人感想之类（深受wmgg和cnjj影响），正巧学院要求每个人都要写个人感想（卷素拓），就下定决心搞一个，途中充满坎坷，最后五次重头再来，终于成功搭建。</strong></p>
-<p><strong>在此过程中，感谢wmgg和cnjj的帮忙~要不是没有他们接受我很多次提问，可能我现在还在初级阶段qaq。</strong></p>
-<p><strong>话不多说，记录一下我的创建博客经历吧~希望对你有用！</strong></p>
-<p>先简要陈列一下大致的过程：</p>
-<p>1.相关工具安装</p>
-<p>2.github相关问题处理</p>
-<p>3.换主题！（原来的主题真的太丑……）</p>
-<p>4.发表文章！</p>
-<p>5.嘚瑟一下（bushi）</p>
-<p>下面就一步步慢慢来吧~</p>
-<h2 id="一、相关工具安装"><a href="#一、相关工具安装" class="headerlink" title="一、相关工具安装"></a>一、相关工具安装</h2><h3 id="安装GIT"><a href="#安装GIT" class="headerlink" title="安装GIT"></a>安装GIT</h3><p><strong>Windows端</strong></p>
-<p>到Git官网下载<strong><em>Git Download</em></strong>，安装后就可以用 <strong>Git Bash</strong> 命令行工具来使用Git了。安装好后，在Git Bash中输入git —version检验是否安装成功。</p>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p><strong>Windows端</strong></p>
-<p>Node.js官网下载LTS版本，64位msi安装包，安装后分别在命令行（win+R输入cmd调用）输入node -v和npm -v检验PATH环境变量是否配置了Node.js</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>Windows环境进入Git Bash，Linux环境进入终端，开始搭博客啦！</p>
-<p>首先新建一个文件夹blog来存放自己的博客，然后cd进入到这个文件夹下，输入下面的命令安装Hexo:</p>
-<p><strong>npm install -g hexo-cli</strong></p>
-<p>同样，安装完毕后需要hexo -v查看一下版本。</p>
-<p>至此需要的工具都安装完了。接下来初始化一下Hexo:</p>
-<p><strong>hexo init blog</strong></p>
-<p>这里的blog取什么名字都行。</p>
-<p>这时，在你的blog文件夹下会出现一个新的blog文件夹，进入到这个子文件夹后新建Hexo。</p>
-<p><strong>npm install</strong></p>
-<p>新建完成后，指定文件夹目录下应该有以下主要文件：</p>
-<ul>
-<li>node_modules：依赖包</li>
-<li>scaffolds：生成文章的一些模板</li>
-<li>source：用来存放自己的文章</li>
-<li>themes：网站主题</li>
-<li>_config.yml：博客的配置文件</li>
+                <h1 id="力学基础梳理"><a href="#力学基础梳理" class="headerlink" title="力学基础梳理"></a>力学基础梳理</h1><h2 id="剪力图和弯矩图"><a href="#剪力图和弯矩图" class="headerlink" title="剪力图和弯矩图"></a>剪力图和弯矩图</h2><ul>
+<li><p>定义使其作用的构件产生顺时针旋转的剪力为正。</p>
+</li>
+<li><p>定义使构件上部受到压缩的弯矩为正，正弯矩使构件产生向上凹的变形。</p>
+</li>
+<li><p>弯矩图正坐标向下</p>
+</li>
+<li><p>连接两个杆端的刚结点,若结点上无外力偶作用,则两个杆端的弯矩值相等,方向相反.</p>
+</li>
 </ul>
-<p><strong>hexo g</strong></p>
-<p><strong>hexo server</strong></p>
-<p>输入以上命令来开启hexo服务，在浏览器中输入localhost:4000就可以看到博客的初始化界面啦，现在还是有点丑丑的。</p>
-<h2 id="二、github相关问题处理"><a href="#二、github相关问题处理" class="headerlink" title="二、github相关问题处理"></a>二、github相关问题处理</h2><p>首先，要做好准备工作，登陆github官网创建个人账号，并且在github中新建一个<strong>和你用户名相同的</strong> 仓库，后面加 <strong>.github.io</strong>，也就是<strong>xxxx.github.io</strong>，只有这样将来要部署到GitHub Page的时候才会被识别。</p>
-<p>这里值得一提的是，github只有英文版，如果英文不太好的友友们（我自己就是）可以用谷歌浏览器打开，让强大的智能替我们翻译一下~</p>
-<h3 id="生成SSH添加到GitHub"><a href="#生成SSH添加到GitHub" class="headerlink" title="生成SSH添加到GitHub"></a><strong>生成SSH添加到GitHub</strong></h3><p>回到Git Bash中，输入以下命令：</p>
-<p><strong>git config —global user.name “yourname”</strong></p>
-<p><strong>git config —global user.email “youremail”</strong></p>
-<p>这里的<strong><em>yourname</em></strong>对应你的GitHub用户名，<strong><em>youremail</em></strong>对应你的GitHub注册邮箱，这样GitHub才能知道你是不是对应它的用户。不放心的话可以用下面两条命令来检查一下：</p>
-<p><strong>git config user.name</strong></p>
-<p><strong>git config user.email</strong></p>
-<p>然后创建SSH，你可以选择密钥的保存位置，然后一路回车。</p>
-<p><strong>ssh-keygen -t rsa -C “youremail”</strong></p>
-<p>这里面可能有一步要输入yes，注意着点就ok</p>
-<p>创建成功后，文件夹下会有两个文件，其中<strong><em>id_rsa</em></strong>是你这台电脑的私人密钥，<strong><em>id_rsa.pub\</em></strong>是公共密钥。把公钥放在GitHub上，这样当你链接GitHub自己的账户时，她就会根据公钥匹配你的私钥，匹配成功才能通过git上传自己的文件到GitHub上。</p>
-<p>在GitHub的setting（右上角头像下拉）中找到<strong><em>SSH and GPG keys</em></strong>的设置选项，点击<strong><em>New SSH key\</em></strong>，把<strong><em>id_rsa.pub\</em></strong>里面的内容复制进去。</p>
-<p>然后回到Git Bash，试试是否配置成功。</p>
-<p>配置成功后，大概率还会收到邮件通知你已经配对成功辣！</p>
-<p>革命成功大半！！！</p>
-<h3 id="将Hexo部署到GitHub"><a href="#将Hexo部署到GitHub" class="headerlink" title="将Hexo部署到GitHub"></a><strong>将Hexo部署到GitHub</strong></h3><p>在这步中，我们将要把Hexo和GitHub关联起来，使得Hexo生成的文章都部署到GitHub上。</p>
-<p>打开网站配置文件_config.yml，拉到最后，将deploy部分修改为：</p>
-<p><strong>deploy:</strong></p>
-<p> <strong>type: git</strong></p>
-<p> <strong>repo: <a target="_blank" rel="noopener" href="https://github.com/YourGithubName/YourGithubName.github.io.git">https://github.com/YourGithubName/YourGithubName.github.io.git</a></strong></p>
-<p> <strong>branch: master</strong></p>
-<p>YourGithubName对应你的GitHub账户</p>
-<p>注意注意注意！这里的所有冒号后面必须要跟一个空格！这里的所有冒号后面必须要跟一个空格！这里的所有冒号后面必须要跟一个空格！重要的事情说三遍！！！</p>
-<p>接下来安装<strong><em>deploy-git</em></strong>，只有这样才能用命令将文章部署到GitHub上：</p>
-<p><strong>npm install hexo-deployer-git —save</strong></p>
-<p>然后进行以下的命令操作：</p>
-<p><strong>hexo clean</strong></p>
-<p><strong>hexo generate</strong></p>
-<p><strong>hexo deploy</strong></p>
-<ul>
-<li><strong>hexo clean</strong>：清除之前生成的东西，在日后新部署文章的时候可以使用，现在加不加没什么区别</li>
-<li><strong>hexo generate</strong>：生成静态文章，缩写“hexo g”</li>
-<li><strong>hexo deploy</strong>：部署文章，缩写“hexo d”</li>
+<h2 id="惯性矩"><a href="#惯性矩" class="headerlink" title="惯性矩"></a>惯性矩</h2><ul>
+<li><p>$正交坐标系公式：I_{z}=\int_A y^{2} \, dA$</p>
+</li>
+<li><p>$极惯性矩公式：I_{p}=\int_A \rho^{2} \, dA$</p>
+</li>
+<li><p>$矩形截面惯性矩：I_{z}=\frac{bh^{3}}{12}$</p>
+</li>
+<li><p>$圆形截面惯性矩：I_{z}=\frac{\pi}{12}R^{4}$</p>
+</li>
 </ul>
-<p>在浏览器地址栏中输入<a target="_blank" rel="noopener" href="https://yourname.github.io就可以看到你的博客网站了！！">https://yourname.github.io就可以看到你的博客网站了！！</a></p>
-<p>开心~~~</p>
-<p>到这里为止，可以说空间的搭建已经完成了，可是有一个问题，那就是太丑辣！！！</p>
-<p>下面跟我一起去修改一下主题吧~</p>
-<h2 id="三、换主题！"><a href="#三、换主题！" class="headerlink" title="三、换主题！"></a>三、换主题！</h2><p>我换的是matery主题，链接奉上~</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
-<p>点开链接，打开readme.md文件。</p>
-<p>点击CN中文说明</p>
-<p>跟着作者的步骤一步步走就ok辣</p>
-<p>值得一提的是，有一部分（个性化）作者没有讲明白</p>
-<p>在csdn上找了一篇文章，</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41376237/article/details/113475727">https://blog.csdn.net/qq_41376237/article/details/113475727</a></p>
-<p>按着这个连接走可以很好的了解每一部分代码各自的功能~</p>
-<p>换主题这方面还是挺繁琐的，但是只要耐心一步步走完，高人领路，一点不难！</p>
-<h2 id="四、发表文章！"><a href="#四、发表文章！" class="headerlink" title="四、发表文章！"></a>四、发表文章！</h2><p>首先，要下载一个编辑md文件的软件，比如typora（我正在用这个写这篇文章）</p>
-<p>正版软件是要收钱的（好像80y）</p>
-<p>至于小道途径也是有的捏，github上一搜一大把，大家八仙过海各显神通吧~</p>
-<p>（富哥当我没说）</p>
-<p>准备工作完毕！现在编辑好想要发表的文章，开始传到自己的网站上！</p>
-<p><strong>将导出的<code>.md</code>文件复制到hexo博客文件下的<code>/source/_posts</code>文件内；</strong></p>
-<p><strong>复制完成后，用编译器打开这个文件，在第一行加上<code>title</code>；</strong></p>
-<p>title格式如下：</p>
-<p>“—-”</p>
-<p>“title：my blog”</p>
-<p>“—-”</p>
-<p>上文中的引号不用输入。</p>
-<p>命名结束完成后，在/source/_posts文件内鼠标右键点击空白处，选择Git Bash Here：</p>
-<p>输入 hexo g (完整命令为hexo generate)，用于生成静态文件；<br>然后输入 hexo s(完整命令为hexo server)，用于启动服务器，主要用来本地预览；完成后 打开浏览器输入 <a href="http://localhost:4000，会发现多了你刚写的那篇博客">http://localhost:4000，会发现多了你刚写的那篇博客</a>;<br>最后输入hexo d(hexo deploy)，用于将本地文件发布到github等git仓库上；</p>
-<p>最后，文章发布成功！！！</p>
-<p>这样就可以搭建好自己的blog空间啦~</p>
-<p>你学废了吗？</p>
-<p>下注文中一些文字出处，再次对原作者表示感谢！</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45663697/article/details/109008471">https://blog.csdn.net/weixin_45663697/article/details/109008471</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41376237/article/details/113475727">https://blog.csdn.net/qq_41376237/article/details/113475727</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzA3NDk4NzA0MQ==&amp;mid=2650486705&amp;idx=1&amp;sn=a7e5d66faf53b223e90fd091cc42b5c0&amp;chksm=8778f4ffb00f7de9f02f84d74393cb81544037ec9af469fa77be2211a4ca4fc5f29b77bbaab2&amp;mpshare=1&amp;scene=23&amp;srcid=1118oY8SYhnqQImXNlJew7hY&amp;sharer_sharetime=1637318270042&amp;sharer_shareid=f4f1251be68d7d516945f36b7eae3f49#rd">https://mp.weixin.qq.com/s?__biz=MzA3NDk4NzA0MQ==&amp;mid=2650486705&amp;idx=1&amp;sn=a7e5d66faf53b223e90fd091cc42b5c0&amp;chksm=8778f4ffb00f7de9f02f84d74393cb81544037ec9af469fa77be2211a4ca4fc5f29b77bbaab2&amp;mpshare=1&amp;scene=23&amp;srcid=1118oY8SYhnqQImXNlJew7hY&amp;sharer_sharetime=1637318270042&amp;sharer_shareid=f4f1251be68d7d516945f36b7eae3f49#rd</a></p>
-<p>欢迎大家对giggle的空间提出宝贵意见！</p>
-<p>如果你也有了自己的blog空间，可以联系giggle互相建个友情链接哟~</p>
+<h2 id="平均正应力"><a href="#平均正应力" class="headerlink" title="平均正应力"></a>平均正应力</h2><script type="math/tex; mode=display">
+\sigma = \frac{P}{A}</script><ul>
+<li>$\sigma$ 是被积函数上的点上的平均应力分布</li>
+<li>$P$ 是沿向内力的合力</li>
+<li>$A$ 是被积函数区域</li>
+</ul>
+<h2 id="平均剪应力"><a href="#平均剪应力" class="headerlink" title="平均剪应力"></a>平均剪应力</h2><script type="math/tex; mode=display">
+\tau_{avg} = \frac{V}{A}</script><ul>
+<li>$τ_{avg}$ — 平均剪应力</li>
+<li>$V$ — 剪应力方向施加在截面上的剪力 </li>
+<li>$A$ — 截面积</li>
+</ul>
+<h2 id="许用应力"><a href="#许用应力" class="headerlink" title="许用应力"></a>许用应力</h2><ul>
+<li><p>所选的许用荷载要小于构件所能承受的极限荷载</p>
+</li>
+<li><p>目前设计中常用的一种方法是安全系数法(F.S.)</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+F.S. = \frac{F_{\text{fail}}}{F_{\text{allow}}}</script><ul>
+<li><p>任何截面的平均应力都不能超过</p>
+<p>安全系数$F.S.$ ×许用应力$σ_{allow}$ 或$τ_{allow}$</p>
+</li>
+</ul>
+<h2 id="正应变"><a href="#正应变" class="headerlink" title="正应变"></a>正应变</h2><script type="math/tex; mode=display">
+\varepsilon_{avg} = \frac{\Delta s' - \Delta s}{\Delta s}</script><script type="math/tex; mode=display">
+\sigma = E \varepsilon</script><h2 id="剪应变"><a href="#剪应变" class="headerlink" title="剪应变"></a>剪应变</h2><script type="math/tex; mode=display">
+\gamma_{nt}=\frac{\pi}{2}-\theta^{'}</script><script type="math/tex; mode=display">
+τ = Gγ</script><h2 id="泊松比"><a href="#泊松比" class="headerlink" title="泊松比"></a>泊松比</h2><script type="math/tex; mode=display">
+\nu=-\frac{\varepsilon_{lat}}{\varepsilon_{long}}</script><script type="math/tex; mode=display">
+\nu=-\frac{\varepsilon_{横向}}{\varepsilon_{纵向}}</script><p>三个材料常数<em>E</em>, <em>ν</em>, 和 <em>G</em>关系如下</p>
+<script type="math/tex; mode=display">
+G=\frac{E}{2(1+\nu)}</script><h2 id="轴向弹力变形"><a href="#轴向弹力变形" class="headerlink" title="轴向弹力变形"></a>轴向弹力变形</h2><h3 id="一般情形"><a href="#一般情形" class="headerlink" title="一般情形"></a>一般情形</h3><script type="math/tex; mode=display">
+\delta = \int_{0}^{L} \frac{P(x)}{A(x) E} \, dx</script><p>其中：</p>
+<ul>
+<li>$\delta$= 两点之间的相对位移</li>
+<li>L = 两点间的距离</li>
+<li>P(x) =与一端相距x处的截面轴力（内力）</li>
+<li>A(x) = 杆件的截面积，表示为 <em>x</em> 的函数</li>
+<li>E = 材料的弹性模量</li>
+</ul>
+<h3 id="等截面均质杆件"><a href="#等截面均质杆件" class="headerlink" title="等截面均质杆件"></a>等截面均质杆件</h3><script type="math/tex; mode=display">
+\delta =  \frac{PL}{A E}</script><h2 id="温度应力"><a href="#温度应力" class="headerlink" title="温度应力"></a>温度应力</h2><p>由试验可知，长度为 的杆件其变形或长度变化量为</p>
+<script type="math/tex; mode=display">
+\delta_{T}=\alpha\Delta TL</script><ul>
+<li>$\delta_{T}$=杆长改变量</li>
+<li>$\alpha$=线性膨胀系数。表示每摄氏度温度变化引起应变的量：1摄氏度 or 1/开尔文 or 1/华氏度</li>
+<li>$ \Delta T $= 杆件的温度变化量</li>
+<li>$L$= 初始杆长</li>
+</ul>
+<h2 id="弯曲正应力"><a href="#弯曲正应力" class="headerlink" title="弯曲正应力"></a>弯曲正应力</h2><h3 id="直杆的纯弯曲变形"><a href="#直杆的纯弯曲变形" class="headerlink" title="直杆的纯弯曲变形"></a>直杆的纯弯曲变形</h3><script type="math/tex; mode=display">
+\varepsilon = -\frac{y}{c}\varepsilon_{max}</script><h3 id="弯曲正应力公式"><a href="#弯曲正应力公式" class="headerlink" title="弯曲正应力公式"></a>弯曲正应力公式</h3><script type="math/tex; mode=display">
+\sigma_{\text{max}} = -\frac{Mc}{I_z}
+\\
+\sigma = - \frac{My}{I_z}</script><h3 id="剪切公式"><a href="#剪切公式" class="headerlink" title="剪切公式"></a>剪切公式</h3><script type="math/tex; mode=display">
+\tau = \frac{VS}{It}</script><p>其中：</p>
+<ul>
+<li><p>( $\tau$ ) 代表剪应力。</p>
+</li>
+<li><p>( V ) 是剪力，即作用于横截面的力。</p>
+</li>
+<li><p>( S) 是静距，即到考虑点至剪切面积的重心的垂直距离与剪切面积的乘积。</p>
+<script type="math/tex; mode=display">
+S = \int_{A'} y \, dA' = y' \bar{A'}</script><p><em>A’</em>是杆件横截面上距离中和轴为y’的横线以外的面积</p>
+<p>y’是A’面积的形心到中和轴的距离</p>
+</li>
+<li><p>( I ) 整个横截面对于中性轴的惯性矩</p>
+</li>
+<li><p>( t ) 是杆件在要求$\tau$ 的点处的横截面宽度</p>
+</li>
+</ul>
+<p>关于S的例子：</p>
+<p><img src="C:\Users\23861\AppData\Roaming\Typora\typora-user-images\image-20231231160944893.png" alt="image-20231231160944893"></p>
+<h2 id="梁的变形"><a href="#梁的变形" class="headerlink" title="梁的变形"></a>梁的变形</h2><h3 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h3><script type="math/tex; mode=display">
+\kappa = \frac{M}{EI_z}</script><h3 id="转角和挠度"><a href="#转角和挠度" class="headerlink" title="转角和挠度"></a>转角和挠度</h3><script type="math/tex; mode=display">
+\kappa=\frac{1}{\rho} = \frac{d\theta}{dx} = \frac{d^2 \nu}{dx^2}</script><p>从而推出</p>
+<script type="math/tex; mode=display">
+\theta = \frac{dv}{dx} = \int \frac{M(x)}{EI} \, dx + C</script><script type="math/tex; mode=display">
+v = \iint \frac{M(x)}{EI} \, dx \, dx + Cx + D</script><h3 id="叠加原理"><a href="#叠加原理" class="headerlink" title="叠加原理"></a>叠加原理</h3><p>叠加原理表明，将荷载分为几部分，先将各部分荷载分别作用在构件上，求出每部分载荷引起的应力或位移，将以上结果相加，即可得到总的应力或位移。</p>
+<h2 id="扭矩图"><a href="#扭矩图" class="headerlink" title="扭矩图"></a>扭矩图</h2><ul>
+<li>方向：右手定则，四手指沿着扭矩或转角的旋转方向握拳，若拇指指向纵轴的横截面向外，则扭矩为正；反之为负。</li>
+</ul>
+<h2 id="扭转公式"><a href="#扭转公式" class="headerlink" title="扭转公式"></a>扭转公式</h2><script type="math/tex; mode=display">
+\tau = \frac{T \rho}{J}</script><script type="math/tex; mode=display">
+\tau_{\text{max}} = \frac{T c}{J}</script><ul>
+<li>$\tau$ 表示扭转应力。</li>
+<li>$\tau_{\text{max}}$ 表示杆上的最大扭转应力（也称为最大剪应力），发生在杆的最外围。</li>
+<li>$T$ 是作用在杆或轴上的扭矩，可由扭转引起的力矩表示。</li>
+<li>$\rho$ 是从杆的中心到考虑点的距离。</li>
+<li>$c$ 是杆的外径，即从杆的中心到杆的最外边缘的距离。</li>
+<li>$J$ 是杆截面的极惯性矩，它是截面对抗扭转的几何特性的度量。</li>
+</ul>
+<h2 id="扭转角"><a href="#扭转角" class="headerlink" title="扭转角"></a>扭转角</h2><script type="math/tex; mode=display">
+\phi = \int_{0}^{L} \frac{T(x)}{J(x)G(x)} \, dx</script><p>$\phi$ = 扭转角，单位为弧度</p>
+<p>$T(x)$ = 在截面 $x$ 处梁或轴的扭矩，由扭转引起的力矩表示</p>
+<p>$J(x)$ = 截面 $x$ 处的极惯性矩，对抗扭转的截面特性</p>
+<p>$G$ = 剪切模量，描述材料抵抗剪切变形的能力</p>
+<p>一般用</p>
+<script type="math/tex; mode=display">
+\phi=\frac{TL}{JG}</script><h2 id="摩尔圆"><a href="#摩尔圆" class="headerlink" title="摩尔圆"></a>摩尔圆</h2><p>圆的方程为</p>
+<script type="math/tex; mode=display">
+\left[ \sigma_{\theta} - \left( \frac{\sigma_x + \sigma_y}{2} \right)^2 \right] + \tau_{\theta}^2 = \left( \frac{\sigma_x - \sigma_y}{2} \right)^2 + \tau_{xy}^2</script><ul>
+<li>摩尔圆的应用</li>
+<li><img src="C:\Users\23861\AppData\Roaming\Typora\typora-user-images\image-20231231171133717.png" alt="image-20231231171133717"></li>
+</ul>
+<h2 id="压杆稳定"><a href="#压杆稳定" class="headerlink" title="压杆稳定"></a>压杆稳定</h2><h3 id="一般公式"><a href="#一般公式" class="headerlink" title="一般公式"></a>一般公式</h3><h1 id="欧拉临界载荷公式"><a href="#欧拉临界载荷公式" class="headerlink" title="欧拉临界载荷公式"></a>欧拉临界载荷公式</h1><p>欧拉临界载荷公式表示为：</p>
+<script type="math/tex; mode=display">
+P_{cr} = \frac{\pi^2 EI}{(KL)^2}</script><p>其中：</p>
+<ul>
+<li><script type="math/tex">P_{cr}</script> 是构件失稳前的临界轴向载荷。</li>
+<li><script type="math/tex">E</script> 是材料的弹性模量。</li>
+<li><script type="math/tex">I</script> 是截面的惯性矩。</li>
+<li><script type="math/tex">L</script> 是构件的长度。</li>
+<li><script type="math/tex">K</script> 是柱子长度系数，用于考虑边界条件对临界载荷的影响。<ul>
+<li>两端铰接压杆：K=1</li>
+<li>一端固定一端自由压杆: K=2</li>
+<li>两端固定压杆：K=0.5</li>
+<li>一端铰接一端固定压杆:K=0.7</li>
+</ul>
+</li>
+</ul>
+<h3 id="铰接理想压杆"><a href="#铰接理想压杆" class="headerlink" title="铰接理想压杆"></a>铰接理想压杆</h3><script type="math/tex; mode=display">
+ \sigma_{cr} = \frac{\pi^2 E}{(L/r)^2}</script><p>其中： </p>
+<ul>
+<li><script type="math/tex">\sigma_{cr}</script> 是临界应力，屈曲失稳前的最大应力，也是理论应力。 </li>
+<li><script type="math/tex">E</script> 是材料的弹性模量。 </li>
+<li><script type="math/tex">L</script> 是杆件的长度。 </li>
+<li><script type="math/tex">r</script> 是截面的最小回转半径。</li>
+<li><script type="math/tex">L/r</script> 是杆件的长度与最小回转半径的比值，也称为杆件的长细比。</li>
+</ul>
+<h2 id="虚功原理"><a href="#虚功原理" class="headerlink" title="虚功原理"></a>虚功原理</h2><script type="math/tex; mode=display">
+\Delta = \sum \int \left( \frac{ \overline{M}M_P}{EI} + \frac{ \overline{F_N}F_{NP}}{EA} + \frac{k\overline{F_Q}F_{QP}}{GA} \right) \mathrm{d}s</script><h3 id="图乘法"><a href="#图乘法" class="headerlink" title="图乘法"></a>图乘法</h3><p><img src="C:\Users\23861\AppData\Roaming\Typora\typora-user-images\image-20231231183131296.png" alt="image-20231231183131296"></p>
 
                 
             </div>
@@ -553,7 +599,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://GiggleWang.github.io/2023/02/06/tong-guo-hexo-he-github-chuang-jian-ge-ren-blog-zhi-bei/">http://GiggleWang.github.io/2023/02/06/tong-guo-hexo-he-github-chuang-jian-ge-ren-blog-zhi-bei/</a>
+                    <a href="http://GiggleWang.github.io/2024/01/19/li-xue-ji-chu-shu-li/">http://GiggleWang.github.io/2024/01/19/li-xue-ji-chu-shu-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -758,54 +804,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/02/06/xian-xing-dai-shu-zheng-li/">
+                <a href="/2024/01/19/li-xue-ji-chu-shu-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="线性代数整理（部分）（前三章）">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="力学基础梳理">
                         
-                        <span class="card-title">线性代数整理（部分）（前三章）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Wang Yixiao
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/02/06/tong-guo-hexo-he-github-chuang-jian-ge-ren-blog-zhi-bei/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="通过hexo和github创建个人blog指北">
-                        
-                        <span class="card-title">通过hexo和github创建个人blog指北</span>
+                        <span class="card-title">力学基础梳理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -816,7 +826,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-19
                             </span>
                         <span class="publish-author">
                             
@@ -827,6 +837,43 @@
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/01/19/ics-nei-rong-zheng-li/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="ics内容整理">
+                        
+                        <span class="card-title">ics内容整理</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Wang Yixiao
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>
